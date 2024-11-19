@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    font-family:  'SFProText', Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing : antialiased;
+    height : 100vh;
+    zoom: 1;
+    background-color: black;
+    overflow-x: hidden;
+
+
+
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  
+  }
+  
+  a:hover {
+    color: rgb(196, 83, 8)
+  }
+
+
+  @font-face {
+    font-family: 'SFProText';
+    src: url('assets/fonts/SF-Pro-Text-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SFProDisplay';
+    src: url('assets/fonts/SF-Pro-Display-Regular.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }

@@ -1,0 +1,120 @@
+.hero {
+
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+
+}
+
+.hero .bgvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+    width: 100%;
+
+}
+
+.bgvideoitem {
+    height: 120%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+
+
+}
+
+.hero-content {
+    top: 220px !important;
+}
+
+.hero-content .hero-text {
+    padding-bottom: 100px;
+}
+
+
+.hero .bgvideolayer {
+
+
+    position: absolute;
+    z-index: 2;
+    opacity: 0.9;
+    width: 100%;
+    top: 180px !important;
+    height: 100%;
+    // object-fit: cover;
+    // object-position: 50% 50%
+}
+
+
+
+
+.bgvideolayer_content {
+    width: 100%;
+}
+
+
+.hero .hero-content {
+    position: absolute;
+    z-index: 3;
+}
+
+
+
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cta {
+    background: black;
+    color: #fff;
+    padding: 10px 100px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+
+}
+
+
+.visionsection {
+    background-color: black !important;
+    color: #fff;
+    min-width: 980px;
+}
+
+.visionsection .container {
+    align-content: center;
+    justify-content: center;
+    text-align: start;
+    padding: 80px 80px 80px !important;
+}
+
+.visionsection .container h2 {
+    margin-bottom: 30px !important;
+}
+
+.visionsection .container p {
+    margin-bottom: 2rem;
+
+
+}
+
+.visionsection .visionimage img {
+    width: 700px;
+    height: 800px;
+    object-fit: cover;
+    object-position: 100% 0%;
+    opacity: 0.8;
+}

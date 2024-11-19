@@ -25,3 +25,26 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+
+npm audit fix --force
+npm install 
+
+nvm install --lts
+nvm use --lts
+npm install -g firebase-tools @angular/cli
+ng version
+ng new vluedot_web
+cd vluedot_web
+ng serve
+ng build --configuration production
+firebase login
+firebase init hosting
+
+
+
+ng build --configuration production
+
+
+nvm use --lts

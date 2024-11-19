@@ -1,0 +1,60 @@
+.navbar {
+    background: transparent;
+    font-size: 15px !important;
+    color: black ;
+    width : 100%;
+    height :80px;
+
+    
+
+  }
+  
+  .navbar .logo {
+
+    padding: 0 30px;
+    font-size: 25px!important;
+    font-family:  'SFProDisplay';
+   
+
+
+
+  }
+
+//   .navbar .nav-links {}
+  
+  .links {
+
+    display: flex;
+    // gap: 20px;
+    align-items: center;
+justify-content: space-evenly;
+padding: 0px !important;
+margin: 0px !important;
+
+  }
+  
+  .links li {
+
+    list-style-type: none;
+  }
+  
+
+
+  
+
+  .action_btn {
+    text-align: center;
+
+
+
+  }
+
+  .toggle_btn{
+    text-align: center;
+  }
+
+  header {
+    position: relative;
+    z-index: 2;
+    // text-align: center;
+  }
