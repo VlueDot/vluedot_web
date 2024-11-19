@@ -48,3 +48,4 @@ ng build --configuration production
 
 
 nvm use --lts
+npm i -g -f firebase-tools @angular/cli

@@ -10,5 +10,5 @@ import { RouterOutlet } from '@angular/router';
   template: '<router-outlet></router-outlet>'
 })
 export class AppComponent {
-  title = 'vluedot_web';
+  // title = 'vluedot_web';
 }
