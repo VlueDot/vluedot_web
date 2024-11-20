@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/vluedot_web/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
