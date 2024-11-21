@@ -1,6 +1,6 @@
 .hero {
 
-    height: 95vh;
+    height: 92vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,7 +53,6 @@
 
 
 
-
 .bgvideolayer_content {
     width: 100%;
 }
@@ -77,15 +76,7 @@
     margin-bottom: 20px;
 }
 
-.cta {
-    background: black;
-    color: #fff;
-    padding: 10px 100px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-
-}
+// cta is global
 
 
 .visionsection {
@@ -99,10 +90,11 @@
     justify-content: center;
     text-align: start;
     padding: 80px 80px 80px !important;
+    padding-left: 150px !important;
 }
 
 .visionsection .container h2 {
-    margin-bottom: 30px !important;
+    margin-bottom: 40px !important;
 }
 
 .visionsection .container p {
@@ -112,9 +104,13 @@
 }
 
 .visionsection .visionimage img {
-    width: 700px;
-    height: 800px;
+    // width: 700px;
+    // height: 800px;
+    width: max-content;
     object-fit: cover;
     object-position: 100% 0%;
     opacity: 0.8;
+    z-index: 2;
+position: relative;
 }
+

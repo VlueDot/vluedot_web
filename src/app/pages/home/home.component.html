@@ -1,16 +1,33 @@
 <app-navbar></app-navbar>
-<main>
-    <section class="hero">
+<main (mouseover)="playvideo(bglayerVideo)" (click)="playvideo(bglayerVideo)" >
+    <!-- <main> -->
+    <section class="hero"  >
         <div id="bglayer" data-hook="bgLayers" data-motion-part="BG_LAYER" class="bgvideo">
             <div id="bglayer" data-motion-part="BG_MEDIA" class="bgvideo1">
-                <video id="bglayer_video" class="bgvideoitem" crossorigin="anonymous" playsinline="" preload="auto"
-                    muted="" loop="" tabindex="-1" autoplay=""
-                    src="https://video.wixstatic.com/video/11062b_95d34f15761e4114a57b17823228948e/1080p/mp4/file.mp4"
-                    >
+
+                <video #bglayerVideo id="autoplayVideo" class="bgvideoitem" crossorigin="anonymous" playsinline="" preload="auto" muted=""
+                    loop="" tabindex="-1" autoplay=""src="https://video.wixstatic.com/video/11062b_95d34f15761e4114a57b17823228948e/1080p/mp4/file.mp4">
+
                 </video>
+
+
+
 
             </div>
         </div>
+
+        <script>
+            const video = document.getElementById('autoplayVideo');
+          
+            video.play().catch(error => {
+                console.log('Autoplay blocked:', error);
+                // Optional: Provide user feedback or prompt
+                alert('Click anywhere to start the video.');
+                document.addEventListener('click', () => {
+                    video.play();
+                }, { once: true });
+            });
+          </script>
 
         <div class="hero-content">
             <div class="hero-text">
@@ -18,16 +35,17 @@
                 <p>We build intelligent software to empower businesses and transform industries.</p>
             </div>
 
-            <a href="https://api.whatsapp.com/send/?phone=%2B51983569250&text&type=phone_number&app_absent=0" class="cta" target="_blank" rel="noopener noreferrer">Contact us</a>
+            <a id ="cubutton" href="https://api.whatsapp.com/send/?phone=%2B51983569250&text&type=phone_number&app_absent=0"
+                class="cta" target="_blank" rel="noopener noreferrer">Contact us</a>
         </div>
 
-        <div class="bgvideolayer">
+        <div class="bgvideolayer" (mouseover)="playvideo(bglayerVideo)">
             <img src="https://static.wixstatic.com/media/84770f_3ebbf7ac3e26427b83ca50c82aabaaf8~mv2.png/v1/fill/w_980,h_600,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/84770f_3ebbf7ac3e26427b83ca50c82aabaaf8~mv2.png"
-                alt="" class="bgvideolayer_content" >
+                alt="" class="bgvideolayer_content">
         </div>
+      
 
 
-       
     </section>
 
     <section id="about" class="section visionsection row ">
@@ -44,11 +62,16 @@
         </div>
 
         <div class="visionimage col">
-            <img src="https://static.wixstatic.com/media/11062b_bfa9815cbaa74b398b7b1a6688b26dd6~mv2.jpg/v1/fill/w_821,h_869,al_tr,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_bfa9815cbaa74b398b7b1a6688b26dd6~mv2.jpg" alt="Fondo abstracto" data-ssr-src-done="true" fetchpriority="high">
+            <img src="https://static.wixstatic.com/media/11062b_bfa9815cbaa74b398b7b1a6688b26dd6~mv2.jpg/v1/fill/w_821,h_869,al_tr,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_bfa9815cbaa74b398b7b1a6688b26dd6~mv2.jpg"
+                alt="Fondo abstracto" data-ssr-src-done="true" fetchpriority="high">
         </div>
     </section>
 
-<!-- </main> -->
+  
 
-<!-- <app-home-vlueio></app-home-vlueio> -->
+    <app-home-vlueio></app-home-vlueio>
+    
 
+
+
+</main>

@@ -24,6 +24,21 @@ body {
     color: rgb(196, 83, 8)
   }
 
+  .cta {
+    background: black;
+    color: #fff;
+    padding: 10px 100px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+
+}
+
+.cta-black{
+  border-style: solid !important;
+border-width: 1px !important;
+}
+
 
   @font-face {
     font-family: 'SFProText';
