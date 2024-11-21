@@ -1,6 +1,8 @@
+
 .hero {
 
     height: 92vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +32,7 @@
 }
 
 .hero-content {
-    top: 220px !important;
+    top: 280px !important;
 }
 
 .hero-content .hero-text {
@@ -83,6 +85,7 @@
     background-color: black !important;
     color: #fff;
     min-width: 980px;
+    width: 100%;
 }
 
 .visionsection .container {
@@ -106,11 +109,15 @@
 .visionsection .visionimage img {
     // width: 700px;
     // height: 800px;
+
     width: max-content;
+    max-height: 600px;
     object-fit: cover;
     object-position: 100% 0%;
     opacity: 0.8;
     z-index: 2;
 position: relative;
+filter: brightness(50%);
+
 }
 

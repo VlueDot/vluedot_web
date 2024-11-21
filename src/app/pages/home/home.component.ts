@@ -2,25 +2,17 @@ import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { HomeVlueioComponent } from '../../components/home-vlueio/home-vlueio.component';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent, HomeVlueioComponent, CommonModule],
+  imports: [NavbarComponent, HomeVlueioComponent, CommonModule, FooterComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-// export class HomeComponent implements AfterViewInit {
-//   @ViewChild('bglayerVideo', { static: true }) videoElement!: ElementRef<HTMLVideoElement>;
 
-//   ngAfterViewInit(): void {
-//     if (this.videoElement && this.videoElement.nativeElement) {
-//       const video = this.videoElement.nativeElement;
-//       video.play();  // Play the video directly without jQuery
-//     }
-//   }
-// }
 
 //DAMN AUTOPLAY :( 
 
