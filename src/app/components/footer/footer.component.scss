@@ -1,8 +1,25 @@
-.footerm{
+.footer {
     background-color: white;
-    height: 100px !important;
+
     position: relative;
     z-index: 1;
+    height: 15vh;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px 200px !important;
 
 
+}
+
+.coloptions {
+
+    text-align: left;
+
+
+}
+
+.coldata{
+    text-align: left;
 }
