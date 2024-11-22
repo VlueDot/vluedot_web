@@ -5,33 +5,32 @@
         <!-- <main> -->
         <section class="hero">
         
-            <div id="bglayer" data-hook="bgLayers" data-motion-part="BG_LAYER" class="bgvideo">
-                <div id="bglayer" data-motion-part="BG_MEDIA" class="bgvideo1">
-
-                    <video #bglayerVideo id="autoplayVideo" class="bgvideoitem" crossorigin="anonymous" playsinline=""
-                        preload="auto" muted="" loop="" tabindex="-1" autoplay=""
-                        src="https://video.wixstatic.com/video/11062b_95d34f15761e4114a57b17823228948e/1080p/mp4/file.mp4">
-
-                    </video>
-
-
-
-
+            <div class="backgr">
+                <div id="bglayer" data-hook="bgLayers" data-motion-part="BG_LAYER" class="bgvideo">
+                    <div id="bglayer" data-motion-part="BG_MEDIA" class="bgvideo1">
+    
+                        <video #bglayerVideo id="autoplayVideo" class="bgvideoitem" crossorigin="anonymous" playsinline=""
+                            preload="auto" muted="" loop="" tabindex="-1" autoplay=""
+                            src="https://video.wixstatic.com/video/11062b_95d34f15761e4114a57b17823228948e/1080p/mp4/file.mp4">
+    
+                        </video>
+    
+    
+    
+    
+                    </div>
                 </div>
+    
+    
+                <div class="bgvideolayer" (mouseover)="playvideo(bglayerVideo)">
+                    <img src="https://static.wixstatic.com/media/84770f_3ebbf7ac3e26427b83ca50c82aabaaf8~mv2.png/v1/fill/w_980,h_600,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/84770f_3ebbf7ac3e26427b83ca50c82aabaaf8~mv2.png"
+                        alt="" class="bgvideolayer_content">
+                </div>
+
             </div>
+       
 
-            <script>
-                const video = document.getElementById('autoplayVideo');
 
-                video.play().catch(error => {
-                    console.log('Autoplay blocked:', error);
-                    // Optional: Provide user feedback or prompt
-                    alert('Click anywhere to start the video.');
-                    document.addEventListener('click', () => {
-                        video.play();
-                    }, { once: true });
-                });
-            </script>
 
 
             <div class="hero-content">
@@ -48,11 +47,18 @@
 
 
 
+            <script>
+                const video = document.getElementById('autoplayVideo');
 
-            <div class="bgvideolayer" (mouseover)="playvideo(bglayerVideo)">
-                <img src="https://static.wixstatic.com/media/84770f_3ebbf7ac3e26427b83ca50c82aabaaf8~mv2.png/v1/fill/w_980,h_600,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/84770f_3ebbf7ac3e26427b83ca50c82aabaaf8~mv2.png"
-                    alt="" class="bgvideolayer_content">
-            </div>
+                video.play().catch(error => {
+                    console.log('Autoplay blocked:', error);
+                    // Optional: Provide user feedback or prompt
+                    alert('Click anywhere to start the video.');
+                    document.addEventListener('click', () => {
+                        video.play();
+                    }, { once: true });
+                });
+            </script>
 
 
 
