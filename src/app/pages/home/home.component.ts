@@ -1,5 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-// import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { Component } from '@angular/core';
 import { HomeVlueioComponent } from '../../components/home-vlueio/home-vlueio.component';
 import { CommonModule } from '@angular/common';
 

@@ -1,1 +1,115 @@
-<p>vlueio works!</p>
+<main class="col vlueio" (mouseover)="playvideo(bglayerVideo)" (click)="playvideo(bglayerVideo)">
+    <!-- <main> -->
+    <section class="hero">
+
+        <div class="backgr">
+            <div id="bglayer" data-hook="bgLayers" data-motion-part="BG_LAYER" class="bgvideo">
+                <div id="bglayer" data-motion-part="BG_MEDIA" class="bgvideo1">
+
+                    <video #bglayerVideo id="autoplayVideo" class="bgvideoitem" crossorigin="anonymous" playsinline=""
+                        preload="auto" muted="" loop="" tabindex="-1" autoplay=""
+                        src="https://video.wixstatic.com/video/11062b_0222b74fadf544389c01621af73cfebd/1080p/mp4/file.mp4">
+
+                    </video>
+
+
+
+
+                </div>
+            </div>
+
+
+            <div class="bgvideolayer" (mouseover)="playvideo(bglayerVideo)">
+                <!-- <img src="https://static.wixstatic.com/media/0da768_8b89980121844d37be099f0dbe33e3e3.png/v1/crop/x_0,y_0,w_6,h_6,q_85,enc_auto/0da768_8b89980121844d37be099f0dbe33e3e3.png"
+                    alt="" class="bgvideolayer_content">  -->
+            </div>
+
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Vlue IO</h1>
+                <h2>SaaS and AI solutions for Business Optimization</h2>
+                <p>VlueIO specializes in the development of advanced business applications, integrating SaaS solutions
+                    and artificial intelligence (AI) technologies to optimize processes, improve communication and
+                    increase productivity in various sectors.</p>
+            </div>
+
+            <!-- <a id="cubutton"
+                href="https://api.whatsapp.com/send/?phone=%2B51983569250&text&type=phone_number&app_absent=0"
+                class="cta" target="_blank" rel="noopener noreferrer">Contact us</a> -->
+        </div>
+
+
+
+
+     
+
+
+
+    </section>
+
+    <!-- <section class="hero2">
+
+        <div class="backgr">
+            <div id="bglayer" data-hook="bgLayers" data-motion-part="BG_LAYER" class="bgvideo">
+                <div id="bglayer" data-motion-part="BG_MEDIA" class="bgvideo1">
+
+                    <video #bglayerVideo id="autoplayVideo" class="bgvideoitem" crossorigin="anonymous" playsinline=""
+                        preload="auto" muted="" loop="" tabindex="-1" autoplay=""
+                        src="https://video.wixstatic.com/video/11062b_0222b74fadf544389c01621af73cfebd/1080p/mp4/file.mp4">
+
+                    </video>
+
+
+
+
+                </div>
+            </div>
+
+
+            <div class="bgvideolayer" (mouseover)="playvideo(bglayerVideo)">
+           
+            </div>
+
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Vlue IO</h1>
+                <h2>SaaS and AI solutions for Business Optimization</h2>
+                <p>VlueIO specializes in the development of advanced business applications, integrating SaaS solutions
+                    and artificial intelligence (AI) technologies to optimize processes, improve communication and
+                    increase productivity in various sectors.</p>
+            </div>
+
+    
+        </div>
+
+
+
+
+     
+
+
+
+    </section>
+ -->
+
+
+</main>
+
+
+
+<script>
+    const video = document.getElementById('autoplayVideo');
+
+    video.play().catch(error => {
+        console.log('Autoplay blocked:', error);
+        // Optional: Provide user feedback or prompt
+        alert('Click anywhere to start the video.');
+        document.addEventListener('click', () => {
+            video.play();
+        }, { once: true });
+    });
+</script>
