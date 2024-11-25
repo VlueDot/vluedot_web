@@ -49,3 +49,7 @@ ng build --configuration production
 
 nvm use --lts
 npm i -g -f firebase-tools @angular/cli
+
+
+## Some considerations
+Dont know why but after build, copy favicon.ico and every js generated in every pages folder. Also modify the route in the css e.g. ("../media/SF-Pro-Text-Regular-CDTVJCHW.ttf") 

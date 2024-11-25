@@ -1,17 +1,27 @@
 <header >
     <div class="navbar row">
-        <div class="col-6">
+        <div class="col-4 navbarcol">
             <div class="logo">Vluedot</div>
             </div>
       
-        <div class="col-3 nav-links">
+        <div class="col-4 nav-links">
             <ul class="links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/vlueio">Vlue IO</a></li>
             </ul>
         </div>
-        <div class="col-2"> 
+        <div class="col-3 action_btn_col"> 
             <a href="https://api.whatsapp.com/send/?phone=%2B51983569250&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="action_btn">Contact Now</a></div>
-        <div class="toggle_btn col-1"><i class="fa-solid fa-bars"></i></div>
+        <div class="toggle_btn col-1" (click) = "openmenu(dropdown_menu)"><i class="fa-solid fa-bars"></i></div>
+
+        <div class="dropdown_menu" #dropdown_menu>
+            <li><a href="/">Home</a></li>
+            <li><a href="/vlueio">Vlue IO</a></li>
+            <li> 
+            <a href="https://api.whatsapp.com/send/?phone=%2B51983569250&text&type=phone_number&app_absent=0" target="_blank" class="action_btn">Contact Now</a>
+
+            </li>
+        </div>
 </div>
 </header>
+

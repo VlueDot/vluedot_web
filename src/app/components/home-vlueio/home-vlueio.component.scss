@@ -1,5 +1,11 @@
+.vlueiohomesection {
+    height: 90vh;
+    min-height: 1550px
+}
+
+
 .vlueiohome {
-    height: 125vh;
+    height: 100%;
     width: 100%;
     position: static;
     z-index: 1;
@@ -7,7 +13,7 @@
 }
 
 .vlueiohome .bgvideoitem {
-    height: max-content;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center center;
@@ -20,11 +26,12 @@
 
 .vlueiohome .content {
     position: absolute;
-    z-index: 3 !important;
-    margin: 120px 120px 150px !important;
+    z-index: 2 !important;
+    margin: 100px 80px !important;
 }
 
-.vlueiohomesection {
+.vlueiohomecontent {
+    height: auto;
     align-items: center;
     text-align: center;
     color: white;
@@ -47,7 +54,7 @@
 }
 
 .vlueiohome p {
-    margin-bottom: 60px !important;
+    // margin-bottom: 60px !important;
     line-height: 1.8;
     letter-spacing: .015rem;
 }
@@ -64,13 +71,13 @@
 .cardsrow .card {
 
     // height: 250px !important;
-    width: 33%;
+    width: 33.3%;
     height: 100%;
-
+    min-width: 265px!important;
     text-align: center !important;
     background-color: transparent;
 
-    padding: 30px 20px 20px !important;
+    padding: 30px 15px 20px !important;
     border-color: transparent !important;
 
 }
@@ -117,5 +124,41 @@ justify-items: center;
 text-align: center!important;
 padding: 10px 30px 40px !important;
 
+
+}
+
+
+
+@media (max-width: 955px) {
+
+    .vlueiohomesection {  min-height: 1800px
+    }
+.card{ width: 50%!important;}
+    
+
+}
+
+@media (max-width: 820px) {.vlueiohomesection {  min-height: 2050px
+}}
+
+@media (max-width: 690px) {
+
+    .vlueiohomesection {  min-height: 2550px
+    }
+    .card{ width: 90%!important;}
+    
+    
+
+}
+
+@media (max-width: 580px) {
+
+    .vlueiohomesection {  min-height: 2500px
+    }
+    
+    .card{ width: 95%!important;}
+    
+    .vlueiohome .content { 
+        margin: 100px 20px !important;}
 
 }
