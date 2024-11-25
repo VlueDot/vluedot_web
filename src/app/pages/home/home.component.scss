@@ -102,8 +102,8 @@
     align-content: center;
     justify-content: center;
     text-align: start;
-    padding: 80px 80px 80px !important;
-    padding-left: 150px !important;
+    padding: 80px 80px 80px 150px!important;
+
 }
 
 .visionsection .container h2 {
@@ -135,6 +135,12 @@ filter: brightness(50%);
 
     .visionimage {  display: none;
     }
-    .container{width: 100%!important;}
+    .visionsection .container{width: 100%!important;
+    
+        text-align: center!important;
+        padding: 80px  !important;
+    }
+
+  
 
 }
