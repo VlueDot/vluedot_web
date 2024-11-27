@@ -1,0 +1,188 @@
+.vlueiohomesection {
+    height: 30vh;
+    min-height: 750px !important;
+    background-color: white;
+}
+
+
+.vlueiohome {
+    height: 100%;
+    width: 100%;
+
+    z-index: 1;
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
+.vlueiohome .bgvideoitem {
+    height: 760px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    z-index: 1;
+    position: absolute;
+    filter: brightness(40%);
+
+}
+
+.vlueiohome .content {
+    position: absolute;
+    z-index: 1 !important;
+    margin: 50px 80px !important;
+    text-align: center;
+
+
+}
+
+.vlueiohomecontent {
+    height: auto;
+    align-items: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    padding: 80px;
+    border-radius: 20px;
+    text-align: left;
+    width: 75vw;
+    max-width: 1110px;
+}
+
+.vlueiohome h1 {
+    margin-bottom: 30px !important;
+    font-size: 40px;
+}
+
+.vlueiohome h2 {
+    font-size: 30px;
+
+    margin-bottom: 30px !important;
+}
+
+.vlueiohome h3 {
+    font-size: 20px !important;
+
+}
+
+.vlueiohome p {
+    // margin-bottom: 60px !important;
+    line-height: 1.8;
+    letter-spacing: .015rem;
+}
+
+.cardsrow {
+
+    place-content: center !important;
+    place-items: center !important;
+    // width: calc(100% - var(--padding)*2);
+    margin: 0px !important;
+
+
+}
+
+.cardsrow .card {
+
+    // height: 250px !important;
+    width: 20%;
+    height: 100%;
+    min-width: 180px !important;
+    text-align: center !important;
+    background-color: transparent;
+
+    padding: 30px 15px 20px !important;
+    border-color: transparent !important;
+
+}
+
+.card .icon {
+    place-content: center;
+    height: 20%;
+    // padding-bottom: 20px !important;
+}
+
+.cardicon {
+    height: 90px;
+    color: white;
+}
+
+
+
+svg g path {
+    fill: white !important;
+}
+
+.card .text {
+    color: white;
+
+}
+
+.card .text h3 {
+    align-items: center;
+    margin: 12px 0px !important;
+    font-size: 21px;
+}
+
+.card .text p {
+    padding: 12px 12px 15px !important;
+    letter-spacing: .02rem;
+
+}
+
+.vluebutt {
+    position: relative;
+    z-index: 2;
+    align-content: center;
+    justify-items: center;
+    text-align: center !important;
+    padding: 10px 30px 40px !important;
+
+
+}
+
+
+.buttcontactus {
+    align-items: center;
+    text-align: center;
+    padding: 50px 0px 10px !important;
+}
+
+
+@media (max-width: 950px) {
+
+    .vlueiohomesection {
+        min-height: 950px !important
+    }
+
+    .vlueiohome .bgvideoitem {
+        min-height: 950px !important;
+    }
+
+
+}
+
+
+
+
+@media (max-width: 700px) {
+
+    .vlueiohomesection {
+        min-height: 1000px !important
+    }
+
+    // .card{ width: 95%!important;}
+
+    .vlueiohome .bgvideoitem {
+        min-height: 1000px !important;
+    }
+
+
+    .vlueiohome .content {
+        margin: 50px 30px !important;
+    }
+
+    .vlueiohomecontent {
+        padding: 55px 35px !important;
+        width: 85vw;
+    }
+}

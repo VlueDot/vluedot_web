@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { HomeVlueioComponent } from '../../components/home-vlueio/home-vlueio.component';
 import {ClientspartnersComponent} from '../../components/clientspartners/clientspartners.component';
+import {WhyusComponent} from '../../components/whyus/whyus.component';
 import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ HomeVlueioComponent, CommonModule, ClientspartnersComponent],
+  imports: [ HomeVlueioComponent, CommonModule, ClientspartnersComponent, WhyusComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
