@@ -2,8 +2,7 @@ import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
-declare var $: any; // Para usar jQuery
-
+declare var $: any; 
 
 @Component({
   selector: 'app-projects',

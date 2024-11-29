@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component , AfterViewInit} from '@angular/core';
 import { HomeVlueioComponent } from '../../components/home-vlueio/home-vlueio.component';
 import {ClientspartnersComponent} from '../../components/clientspartners/clientspartners.component';
 import {WhyusComponent} from '../../components/whyus/whyus.component';
 import { CommonModule } from '@angular/common';
 import {ProjectsComponent} from '../../components/projects/projects.component';
+declare var $: any; 
 
 
 @Component({
@@ -17,21 +18,46 @@ import {ProjectsComponent} from '../../components/projects/projects.component';
 
 //DAMN AUTOPLAY :( 
 
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
 
 
 
-  public playvideo(video: HTMLVideoElement): void {
+  // public playvideo(video: HTMLVideoElement): void {
 
-    var playPromise = video.play()
-    if (playPromise !== undefined) {
-      playPromise.then(_ => {
-        video.play()
-      })
-      .catch(error => {
-        console.log(error)
-      });
+  //   var playPromise = video.play()
+  //   if (playPromise !== undefined) {
+  //     playPromise.then(_ => {
+  //       video.play()
+  //       video.muted = true;
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     });
+  //   }
+  // }
+
+
+
+  ngAfterViewInit(): void {
+
+
+    try {
+
+      const videoElement = $('.bgvideoitem')
+      for (let i = 0; i < videoElement.length; i++){
+
+        videoElement[i].play(); 
+        videoElement[i].muted = true;
+        
+      }
+
+      
+
+
     }
-  }
+    catch (e) { console.log(e)}
+
+
+}
 
 }

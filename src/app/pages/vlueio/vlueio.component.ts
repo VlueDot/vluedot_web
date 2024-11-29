@@ -18,6 +18,7 @@ export class VlueioComponent implements OnInit {
     if (playPromise !== undefined) {
       playPromise.then(_ => {
         video.play()
+        video.muted = true;
       })
         .catch(error => {
           console.log(error)

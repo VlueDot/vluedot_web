@@ -72,6 +72,20 @@ img {
   place-content: center;
 
 }
+::ng-deep .slick-dots li button {
+  background: #ccc !important; /* Cambiar el color predeterminado */
+  border-radius: 50%!important; /* Redondear si deseas puntos circulares */
+  width: 7px!important; 
+  height: 7px!important;
+  padding: 0!important;
+}
+
+/* Cambiar el color de los puntos activos */
+::ng-deep .slick-dots li.slick-active button {
+  background: #fff !important; /* Cambiar el color cuando está activo */
+}
+
+
 
 @media (max-width: 2400px) {
 
