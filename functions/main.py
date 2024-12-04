@@ -22,11 +22,8 @@ def get_api_key():
 
     print(origin)
     print(forward)
-
     # print(request.headers.get('X-Forwarded-Proto'))
     print(request.headers.__dict__)
-
-    # print(ALLOWED_ORIGINS[request.headers.get('X-Forwarded-For')] != request.headers.get('Origin'))
 
     if (  forward not in ALLOWED_ORIGINS[origin]): return jsonify({
         "res": "Not allowed origin",
