@@ -1,4 +1,5 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+declare var $: any; 
 
 
 
@@ -9,7 +10,10 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './vlueio.component.html',
   styleUrl: './vlueio.component.scss'
 })
-export class VlueioComponent implements OnInit {
+export class VlueioComponent implements OnInit, AfterViewInit {
+
+
+  message: string = '';
 
 
   public playvideo(video: HTMLVideoElement): void {
@@ -51,6 +55,36 @@ export class VlueioComponent implements OnInit {
   ngOnInit(): void {
 
 
+
+
+
+
+
+  }
+
+  ngAfterViewInit(): void {
+
+    try {
+
+      const videoElement = $('.bgvideoitem')
+      for (let i = 0; i < videoElement.length; i++){
+
+        try {
+          videoElement[i].play(); 
+          videoElement[i].muted = true;
+          
+        } catch (error) {
+          console.log(videoElement[i], error)
+        }
+
+        
+      }
+    }
+    catch (e) { "VideoError:"+ console.log(e)}
+
+    
+
+   this.loadChatScript();
 
   }
 
@@ -109,6 +143,33 @@ export class VlueioComponent implements OnInit {
     clearInterval(this.carouselInterval);
 
   }}
+
+
+  async loadChatScript(){
+
+    try {
+      
+      const response = await fetch('https://vluedotweb-6mv7qugjda-uc.a.run.app/api-key'); // Cambia por tu URL
+      // const response = await fetch('http://127.0.0.1:5003/vluedotweb/us-central1/vluedotweb/api-key'); // Cambia por tu URL
+      const status = await response.status
+      const { res} = await response.json();
+      const script = document.createElement('script');
+      script.src = `http://127.0.0.1:5002/vlueiochat.js?token=${res}`;
+      script.async = true;
+
+      const e = document.getElementById("vlueiochat");
+      e?.appendChild(script);
+      
+      
+    } catch (error) {
+      console.log(error);
+    }
+
+
+  }
+
+
+
 
 
 

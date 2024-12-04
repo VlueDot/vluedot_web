@@ -1,4 +1,6 @@
-<main class=" vlueio" (mouseover)="playvideo(bglayerVideo);startCarousel(carouselin)" (click)="playvideo(bglayerVideo);startCarousel(carouselin)" (touchstart)="playvideo(bglayerVideo);startCarousel(carouselin)"  >
+<main class=" vlueio" (mouseover)="playvideo(bglayerVideo);startCarousel(carouselin)"
+    (click)="playvideo(bglayerVideo);startCarousel(carouselin)"
+    (touchstart)="playvideo(bglayerVideo);startCarousel(carouselin)">
 
     <section class="hero">
 
@@ -52,16 +54,26 @@
 
         </div>
 
-        <div class="hero-content">
-            <div class="hero-text">
-                <!-- <h1>Vlue IO</h1> -->
-                <h3>Integrated Artificial Intelligence</h3>
-                <p>VlueIO incorporates Artificial Intelligence to enhance business solutions, facilitating data
-                    analysis, predictions and advanced automation.</p>
+
+        <div class="herocontainer">
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <h3>Integrated Artificial Intelligence</h3>
+                    <p>VlueIO incorporates Artificial Intelligence to enhance business solutions, facilitating data
+                        analysis, predictions and advanced automation.</p>
+                </div>
+                <div class="chat" id = "vlueiochat">
+
+                </div>
+                
             </div>
 
 
         </div>
+
+
 
     </section>
 
@@ -80,7 +92,7 @@
             </div>
 
 
-            <!-- <div class="bgvideolayer" (mouseover)="playvideo(bglayerVideo)"> </div> -->
+
 
         </div>
 
@@ -97,14 +109,14 @@
 
 
             <div class="container">
-                <div #carouselin  class="carousel">
+                <div #carouselin class="carousel">
                     <div class="a it"><img [src]=url1 alt=""></div>
                     <div class="b it"><img [src]=url2 alt=""></div>
                     <div class="c it"><img [src]=url3 alt=""></div>
                     <div class="d it"><img [src]=url4 alt=""></div>
 
 
-             
+
                 </div>
             </div>
 
@@ -112,22 +124,13 @@
 
         </div>
 
-        
+
+
+
 
     </section>
+
+
+
 </main>
 
-
-
-<script>
-    const video = document.getElementById('autoplayVideo');
-
-    video.play().catch(error => {
-        console.log('Autoplay blocked:', error);
-        // Optional: Provide user feedback or prompt
-        alert('Click anywhere to start the video.');
-        document.addEventListener('click', () => {
-            video.play();
-        }, { once: true });
-    });
-</script>

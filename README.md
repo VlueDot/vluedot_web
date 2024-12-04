@@ -46,9 +46,15 @@ firebase init hosting
 
 ng build --configuration production
 
+# Start terminal
 
 nvm use --lts
 npm i -g -f firebase-tools @angular/cli
+cd functions
+source venv/bin/activate
+. env/bin/activate
+nodeenv -p
+
 
 
 ## Some considerations

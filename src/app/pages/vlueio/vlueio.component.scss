@@ -142,17 +142,19 @@
     justify-content: center;
     color: black;
     text-align: center;
-    min-height: 380px;
+    min-height: 720px;
+    place-items: center;
 
 }
 
 
 .hero2 .backgr {
     position: absolute;
-    height: 50vh;
     width: 100%;
     z-index: 1;
     min-height: 380px;
+    height: 50vh!important;
+min-height: 720px;
 }
 
 
@@ -164,8 +166,8 @@
     z-index: 1;
     opacity: 1;
     width: 100%;
-    height: 100%;
-    ;
+    height: 50vh!important;
+min-height: 720px;
 
 }
 
@@ -181,8 +183,17 @@
 
 }
 
+.hero2 .herocontainer{
+
+    height: 100%;
+place-items: center;
+place-content: center;
+
+
+}
+
 .hero2 .hero-content {
-    top: 17vh !important;
+    // top: 17vh !important;
     color: white;
     padding: 0px 15% !important;
 }
@@ -209,7 +220,8 @@
     // object-position: 50% 50%
     background-repeat: repeat;
     background-image: url(https://static.wixstatic.com/media/0da768_8b89980121844d37be099f0dbe33e3e3.png/v1/crop/x_0,y_0,w_6,h_6,q_85,enc_auto/0da768_8b89980121844d37be099f0dbe33e3e3.png);
-    background-size: .8%;
+    background-size: .3%;
+
 
 }
 
@@ -231,6 +243,9 @@
 .hero2 .hero-content {
     position: relative;
     z-index: 2;
+    gap: 20px!important;
+flex-direction: column;
+display: flex;
 }
 
 
@@ -346,7 +361,8 @@
     // object-position: 50% 50%
     // background-repeat: repeat;
     // background-image: url(https://static.wixstatic.com/media/0da768_8b89980121844d37be099f0dbe33e3e3.png/v1/crop/x_0,y_0,w_6,h_6,q_85,enc_auto/0da768_8b89980121844d37be099f0dbe33e3e3.png);
-    // background-size: .8%;
+    // background-size: .3%;
+
 
 }
 
@@ -474,6 +490,121 @@
     z-index: 2;
     // background-repeat: no-repeat;
 }
+
+.chat {
+    position: relative; z-index: 2;
+    place-content: center; 
+
+}
+
+
+
+
+
+
+
+
+
+// /* vlueiochat.css */
+// #vlueiochat-container {
+//     // position: relative !important;
+//     width: auto;
+//     height: auto;
+// }
+
+// #vlueiochat-chatbox {
+//     // border: 1px solid #ccc;
+//     border-radius: 10px !important;
+//     background-color: transparent;
+//     backdrop-filter: blur(20px) !important;
+//     padding: 20px;
+    
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px;
+//     place-content: center;
+//     place-items: center;
+// }
+
+// #vlueiochat-sendmessages{
+//     width: 100%;
+//     // height: 120px !important;
+//     align-content: center;
+// align-items: center;
+// display: flex;
+// }
+
+
+// #vlueiochat-input {
+//     width: 100%!important;
+//     max-height: 130px; /* Limita la altura máxima si es necesario */
+//     // min-height: 18px; /* Altura mínima para una línea de texto */
+//     height: 65px;
+//     padding: 10px;
+//     font-size: 15px;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+//     resize: none; /* Evita el redimensionamiento manual */
+//     overflow-y:scroll; /* Oculta el scroll interno */
+//     box-sizing: border-box; /* Incluye el padding en el tamaño total */
+//     place-content: center;
+
+
+
+// }
+
+
+
+
+
+
+// #vlueiochat-send {
+//     width: 8%!important;
+
+//     padding: 10px;
+//     background-color: #007BFF;
+//     color: white;
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+// }
+
+// #vlueiochat-send:hover {
+//     background-color: #0056b3;
+// }
+
+// #vlueiochat-messages {
+//     flex-grow: 1;
+//     overflow-y: scroll;
+
+//     font-size: 15px;
+//     color: white !important;
+//     height: 164.71px;
+// // margin: 15px 0px !important;
+// padding-right: 10px !important;
+// scroll-behavior: smooth;
+// place-content: center;
+// place-items: center;
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
