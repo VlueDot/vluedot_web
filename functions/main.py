@@ -1,12 +1,9 @@
 from flask import Flask, jsonify, request
 from google.cloud import secretmanager
-from firebase_functions import https_fn
+from firebase_functions import https_fn, options
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
-
-ALLOWED_ORIGINS = {'http://localhost:4200':['38.25.22.137'], None : [] }
 
 def get_secret(secret_id, project_id):
     client = secretmanager.SecretManagerServiceClient()
@@ -25,10 +22,6 @@ def get_api_key():
     # print(request.headers.get('X-Forwarded-Proto'))
     print(request.headers.__dict__)
 
-    if (  forward not in ALLOWED_ORIGINS[origin]): return jsonify({
-        "res": "Not allowed origin",
-        }), 500
-
     secret_id = "vlueiochatAPIkey"  # Nombre del secreto
     project_id = "vluedotweb"  # Reemplaza con tu ID de proyecto
     try:
@@ -42,7 +35,7 @@ def test():
     return {"Test" : "Everything K"}, 200
     
 
-@https_fn.on_request()
+@https_fn.on_request(cors=options.CorsOptions(cors_origins="*", cors_methods=["get", "post"]))
 def vluedotweb(req: https_fn.Request) -> https_fn.Response:
     with app.request_context(req.environ):
         return app.full_dispatch_request()

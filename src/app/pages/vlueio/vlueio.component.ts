@@ -149,12 +149,12 @@ export class VlueioComponent implements OnInit, AfterViewInit {
 
     try {
       
-      const response = await fetch('https://vluedotweb-6mv7qugjda-uc.a.run.app/api-key'); // Cambia por tu URL
-      // const response = await fetch('http://127.0.0.1:5003/vluedotweb/us-central1/vluedotweb/api-key'); // Cambia por tu URL
+      const response = await fetch('https://vluedotweb-6mv7qugjda-uc.a.run.app/api-key'); 
+      // const response = await fetch('http://127.0.0.1:5003/vluedotweb/us-central1/vluedotweb/api-key');
       const status = await response.status
       const { res} = await response.json();
       const script = document.createElement('script');
-      script.src = `http://127.0.0.1:5002/vlueiochat.js?token=${res}`;
+      script.src = `http://127.0.0.1:5002/vlueiochat.js?api_key=${res}`;
       script.async = true;
 
       const e = document.getElementById("vlueiochat");

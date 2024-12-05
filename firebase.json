@@ -11,17 +11,6 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ],
-    "headers": [
-      {
-        "source": "/**",
-        "headers": [
-          {
-            "key": "Content-Security-Policy",
-            "value": "script-src 'self' https://vlueiochat.web.app"
-          }
-        ]
-      }
     ]
   },
   "functions": [
