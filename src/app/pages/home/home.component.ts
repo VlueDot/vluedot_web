@@ -22,21 +22,6 @@ export class HomeComponent implements AfterViewInit {
 
 
 
-  // public playvideo(video: HTMLVideoElement): void {
-
-  //   var playPromise = video.play()
-  //   if (playPromise !== undefined) {
-  //     playPromise.then(_ => {
-  //       video.play()
-  //       video.muted = true;
-  //     })
-  //     .catch(error => {
-  //       console.log(error)
-  //     });
-  //   }
-  // }
-
-
 
   ngAfterViewInit(): void {
 

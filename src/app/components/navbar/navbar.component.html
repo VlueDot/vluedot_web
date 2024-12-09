@@ -1,27 +1,43 @@
-<header >
-    <div class="navbar row">
-        <div class="col-4 navbarcol">
-            <div class="logo" (click) = 'gohome()'>Vluedot</div>
-            </div>
-      
+<header>
+    <div class="navbar row" [ngStyle]="{color: this.textColor}" >
+        <div class="col-3 navbarcol">
+            <div class="logo" (click)="changepage('')">Vluedot</div>
+        </div>
+
         <div class="col-4 nav-links">
             <ul class="links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/vlueio">Vlue IO</a></li>
+                <li (click)="changepage('')">Home</li>
+                <li (click)="changepage('vlueio')">Vlue IO</li>
             </ul>
         </div>
-        <div class="col-3 action_btn_col"> 
-            <a href="https://api.whatsapp.com/send/?phone=%2B51983569250&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="action_btn">Contact Now</a></div>
-        <div class="toggle_btn col-1" (click) = "openmenu(dropdown_menu)"><i class="fa-solid fa-bars"></i></div>
+        <div class="col-2 lang-selector">
+            <ul class="links">
+                <li *ngIf="this.currentLang == 'es'; else esp_option" (click)="changeLanguage('en')">Eng</li>
+                <ng-template #esp_option>
+                    <li (click)="changeLanguage('es')">Esp</li>
+                </ng-template>
+
+            </ul>
+
+        </div>
+        <div class="col-3 action_btn_col">
+            <a href="https://api.whatsapp.com/send/?phone=%2B51983569250&text&type=phone_number&app_absent=0"
+                target="_blank" rel="noopener noreferrer" class="action_btn" i18n>Contact Now</a>
+        </div>
+        <div class="toggle_btn col-3" (click)="openmenu(dropdown_menu)"><i class="fa-solid fa-bars"></i></div>
 
         <div class="dropdown_menu" #dropdown_menu>
-            <li><a href="/">Home</a></li>
-            <li><a href="/vlueio">Vlue IO</a></li>
-            <li> 
-            <a href="https://api.whatsapp.com/send/?phone=%2B51983569250&text&type=phone_number&app_absent=0" target="_blank" class="action_btn">Contact Now</a>
+            <li (click)="changepage('')">Home</li>
+            <li (click)="changepage('vlueio')">Vlue IO</li>
+            <li *ngIf="this.currentLang == 'es'; else esp_option2" (click)="changeLanguage('en')">English version</li>
+            <ng-template #esp_option2>
+                <li (click)="changeLanguage('es')">Version en español</li>
+            </ng-template>
+            <li>
+                <a href="https://api.whatsapp.com/send/?phone=%2B51983569250&text&type=phone_number&app_absent=0"
+                    target="_blank" class="action_btn" i18n>Contact Now</a>
 
             </li>
         </div>
-</div>
+    </div>
 </header>
-

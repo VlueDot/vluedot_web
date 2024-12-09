@@ -49,12 +49,19 @@ ng build --configuration production
 # Start terminal
 
 nvm use --lts
+npm i -g -f 
 npm i -g -f firebase-tools @angular/cli
-cd functions
-source venv/bin/activate
-. env/bin/activate
-nodeenv -p
 
+
+# Serve
+cd dist/vluedot_web/browser
+http-server -p 5005
+
+ng serve --proxy-config proxy.conf.json
+
+
+# i18n 
+ ng extract-i18n --output-path  src/assets/i18n --out-file en.xlf
 
 
 ## Some considerations

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="7712347074137340568" datatype="html">
+        <source>CUSTOMERS AND PARTNERS</source>
+        <target>CLIENTES Y ALIADOS</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/clientspartners/clientspartners.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2838536357506469218" datatype="html">
+        <source> Phone: +51 983569250 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> email: info@vluedot.com </source>
+        <target> Teléfono: +51 983569250 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> correo: info@vluedot.com </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1524103738380835849" datatype="html">
+        <source>SaaS and AI solutions for Business Optimization</source>
+<target>Soluciones SaaS e IA para la Optimización Empresarial</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8307647683972314450" datatype="html">
+        <source>VlueIO is the division of Vluedot dedicated to offering specialized solutions in business applications, with a focus on SaaS (Software as a Service) and artificial intelligence integration. Our services are designed to transform and optimize the way companies operate, adapting to the needs of each sector.</source>
+<target>VlueIO es la división de Vluedot dedicada a ofrecer soluciones especializadas en aplicaciones empresariales, con un enfoque en SaaS (Software como Servicio) e integración de inteligencia artificial. Nuestros servicios están diseñados para transformar y optimizar la forma en que las empresas operan, adaptándose a las necesidades de cada sector.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">14,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4484494795002456491" datatype="html">
+        <source>Operations Tracking</source>
+<target>Seguimiento de Operaciones</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1762415340626116056" datatype="html">
+        <source>Santino Ops allows real-time tracking of the status of operational tasks, sending automatic updates based on emails and other key sources of information.</source>
+<target>Santino Ops permite el seguimiento en tiempo real del estado de las tareas operativas, enviando actualizaciones automáticas basadas en correos electrónicos y otras fuentes clave de información.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5700027100932162832" datatype="html">
+        <source>Sync ERP with Operational Data</source>
+<target>Sincronizar ERP con Datos Operacionales</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5471581249693425535" datatype="html">
+        <source>Connected to ERPs such as Odoo, SAP, Oracle, CargoWise, among others, the system updates and organizes information automatically, centralizing the management of documents and essential data.</source>
+<target>Conectado a ERPs como Odoo, SAP, Oracle, CargoWise, entre otros, el sistema actualiza y organiza la información automáticamente, centralizando la gestión de documentos y datos esenciales.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9020357569007337313" datatype="html">
+        <source>Cost and Expense Management</source>
+<target>Gestión de Costos y Gastos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="694316135244333034" datatype="html">
+        <source>Santino Ops helps the registration and control of expenses, such as cash in field operations. Facilitates transparency, monitoring of operating costs and budget management</source>
+<target>Santino Ops ayuda en el registro y control de gastos, como el dinero en efectivo en operaciones de campo. Facilita la transparencia, el monitoreo de costos operacionales y la gestión de presupuestos.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4135323463363436761" datatype="html">
+        <source>Process automation</source>
+<target>Automatización de Procesos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">132,133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3476204887372736925" datatype="html">
+        <source>Automate repetitive tasks, eliminating inefficiencies and significantly reducing execution times in administrative and operational processes. It triggers productivity by focusing on what matters and is urgent.</source>
+<target>Automatiza tareas repetitivas, eliminando ineficiencias y reduciendo significativamente los tiempos de ejecución en procesos administrativos y operacionales. Desencadena productividad al centrarse en lo que importa y es urgente.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">133,135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6015904323216815269" datatype="html">
+        <source>Comprehensive Communication</source>
+<target>Comunicación Integral</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">173,174</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="517561415524563583" datatype="html">
+        <source>Santino Ops integrates AI to adapt messages and notifications according to the needs of the customer and the operation, improving communication both within the company and with collaborators and customers.</source>
+<target>Santino Ops integra IA para adaptar los mensajes y notificaciones según las necesidades del cliente y de la operación, mejorando la comunicación tanto dentro de la empresa como con los colaboradores y clientes.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">174,176</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7843553668200512122" datatype="html">
+        <source>Meet VlueIO </source>
+<target>Conozca VlueIO</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
+          <context context-type="linenumber">183,184</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6458385561284654416" datatype="html">
+        <source>Contact Now</source>
+<target>Contacta Ahora</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5145727170312618997" datatype="html">
+        <source>OUR PRODUCTS</source>
+<target>NUESTROS DESARROLLOS</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/projects/projects.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6082214301668677795" datatype="html">
+        <source>WHY CHOOSE VLUEDOT</source>
+<target>TRABAJE CON VLUEDOT</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/whyus/whyus.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1126211849506088113" datatype="html">
+        <source>We stand out for our innovative approach and our dedication to excellence in every solution we offer.</source>
+       <target>Nos destacamos por nuestro enfoque innovador y nuestra dedicación a la excelencia en cada solución que ofrecemos.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/whyus/whyus.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4294482239012726409" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/> Commitment to Quality and Results <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> We work hand in hand with our customers to ensure that our solutions are not only effective, but also generate a clear and measurable return on investment.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Continuous and Evolutionary Support<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> We provide continuous support and adapt our solutions as the needs of the client&apos;s business evolve.</source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/> Compromiso con la Calidad y los Resultados<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> Trabajamos de la mano con nuestros clientes para garantizar que nuestras soluciones no solo sean efectivas, sino que también generen un retorno de inversión claro y medible.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Soporte Continuo y Evolutivo<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> Ofrecemos soporte constante y adaptamos nuestras soluciones a medida que evolucionan las necesidades del negocio de nuestros clientes.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/whyus/whyus.component.html</context>
+          <context context-type="linenumber">17,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8525213662266893834" datatype="html">
+        <source>Contact us</source>
+        <target>Contáctanos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/whyus/whyus.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2120954828714997461" datatype="html">
+        <source>Innovation for Business Optimization</source>
+<target>Innovación para la Optimización Empresarial</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8074786656656843160" datatype="html">
+        <source>We build intelligent software to empower businesses and transform industries.</source>
+<target>Construimos software inteligente para empoderar a las empresas y transformar industrias.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4776941591063994626" datatype="html">
+        <source>OUR VISION</source>
+<target>NUESTRA VISIÓN</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">72,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7398764675467057697" datatype="html">
+        <source>We are transforming the way companies use technology to optimize their processes.</source>
+<target>Estamos transformando la forma en que las empresas utilizan la tecnología para optimizar sus procesos.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="182291870416939522" datatype="html">
+        <source>We focus on the creation of customized business software, which integrates artificial intelligence, data analysis and process automation to improve the operational efficiency of our customers, reduce their costs and simplify their management.</source>
+<target>Nos enfocamos en la creación de software empresarial personalizado, que integra inteligencia artificial, análisis de datos y automatización de procesos para mejorar la eficiencia operativa de nuestros clientes, reducir sus costos y simplificar su gestión.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">74,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3459924090244365021" datatype="html">
+        <source>VlueIO specializes in the development of advanced business applications, integrating SaaS solutions and AI technologies to optimize processes, improve communication and increase productivity in various sectors.</source>
+<target>VlueIO se especializa en el desarrollo de aplicaciones empresariales avanzadas, integrando soluciones SaaS y tecnologías de IA para optimizar procesos, mejorar la comunicación e incrementar la productividad en diversos sectores.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4377572397886688014" datatype="html">
+        <source>Integrated Artificial Intelligence</source>
+<target>Inteligencia Artificial Integrada</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1592026689143229175" datatype="html">
+        <source>VlueIO incorporates Artificial Intelligence to enhance business solutions, facilitating data analysis, predictions and advanced automation.</source>
+<target>VlueIO incorpora Inteligencia Artificial para mejorar las soluciones empresariales, facilitando el análisis de datos, predicciones y automatización avanzada.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
+          <context context-type="linenumber">64,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1337902733296275050" datatype="html">
+        <source>Integration with ERP</source>
+<target>Integración con ERP</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
+          <context context-type="linenumber">102,103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5749655538421404365" datatype="html">
+        <source>We understand the importance of your systems working in a synchronized way. We offer personalized integration with your ERP to ensure that information flows continuously and reliably. With this integration, companies can centralize their data and automate the entry and updating of information, from orders and stock to financial reports, achieving a comprehensive management of their operations.</source>
+<target>Entendemos la importancia de que sus sistemas trabajen de manera sincronizada. Ofrecemos integración personalizada con su ERP para garantizar que la información fluya de manera continua y confiable. Con esta integración, las empresas pueden centralizar sus datos y automatizar la entrada y actualización de información, desde pedidos y existencias hasta informes financieros, logrando una gestión integral de sus operaciones.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
+          <context context-type="linenumber">103,106</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
