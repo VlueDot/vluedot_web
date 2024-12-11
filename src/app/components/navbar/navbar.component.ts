@@ -40,7 +40,7 @@ export class NavbarComponent implements OnInit {
   changeLanguage(lang: string): void {
     LanguageUtils.setLanguage(window, lang);
     const new_route = `/${lang}${this.router.url}`
-    console.log('new route ' + new_route)
+    // console.log('new route ' + new_route)
     window.location.href = new_route
 
 
@@ -55,7 +55,7 @@ export class NavbarComponent implements OnInit {
     
   }
   public changeNavColor(route: string): void {
-    console.log(`change color for route ${route}`)
+    // console.log(`change color for route ${route}`)
     if(route === ''){
       this.textColor = 'black'
      }

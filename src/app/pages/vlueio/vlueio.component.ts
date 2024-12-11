@@ -1,12 +1,13 @@
-import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
-declare var $: any; 
-
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { LanguageUtils } from 'src/utils/language.utils';
+import { CommonModule } from '@angular/common';
+declare var $: any;
 
 
 @Component({
   selector: 'app-vlueio',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './vlueio.component.html',
   styleUrl: './vlueio.component.scss'
 })
@@ -47,48 +48,73 @@ export class VlueioComponent implements OnInit, AfterViewInit {
   public url3 = "https://static.wixstatic.com/media/5ab796_17ce0190eb1d435587115b618b0e073a~mv2.png/v1/fill/w_150,h_150,al_c,q_80,usm_0.66_1.00_0.01/5ab796_17ce0190eb1d435587115b618b0e073a~mv2.png"
   public url4 = "https://static.wixstatic.com/media/5ab796_e334fcbafb694bd3a1e93f3593e2c100~mv2.png/v1/fill/w_250,h_200,al_c,q_80,usm_0.66_1.00_0.01/5ab796_e334fcbafb694bd3a1e93f3593e2c100~mv2.png"
 
-  
 
 
+  loginRequired: boolean = false;
+  tokenvalidated: boolean = false
 
 
   ngOnInit(): void {
+    window.addEventListener('loginRequired', () => { this.Requiredlogin(window) });
 
+    if (window.localStorage.getItem('googletoken')) {
+      var tokenvalidated = this.validategoogletoken(window.localStorage.getItem('googletoken'))
+      if (tokenvalidated) {
+        this.loginRequired = false
+        
 
-
-
-
-
+      }else this.loginRequired = true
+    } 
 
   }
 
+
   ngAfterViewInit(): void {
+
+
 
     try {
 
       const videoElement = $('.bgvideoitem')
-      for (let i = 0; i < videoElement.length; i++){
+
+
+      for (let i = 0; i < videoElement.length; i++) {
 
         try {
-          videoElement[i].play(); 
+          videoElement[i].play();
           videoElement[i].muted = true;
-          
+
         } catch (error) {
           console.log(videoElement[i], error)
         }
 
-        
+
       }
     }
-    catch (e) { "VideoError:"+ console.log(e)}
+    catch (e) { "VideoError:" + console.log(e) }
 
-    
 
-   this.loadChatScript();
+
+    this.loadChatScript();
+    (window as any).handleCredentialResponse = this.handleCredentialResponse.bind(this);
+    // console.log('Callback registrado:', (window as any).handleCredentialResponse);
+
+
+    if(this.tokenvalidated){
+      var el  = window.document.getElementById('credential_picker_container')
+      console.log('ffff')
+      console.log(el)
+      if (el) el.hidden = true
+    }
 
   }
 
-  rotateCarousel(carousel:any): void {
+  Requiredlogin(window:any): void {
+    this.loginRequired = true
+    window.document.getElementById('vlueiochat-input').hidden = this.loginRequired
+  }
+
+  rotateCarousel(carousel: any): void {
 
 
     const elementA = carousel.querySelector('.a') as HTMLElement;
@@ -97,69 +123,72 @@ export class VlueioComponent implements OnInit, AfterViewInit {
     const elementD = carousel.querySelector('.d') as HTMLElement;
     // const elementE = carousel.querySelector('.e') as HTMLElement;
 
-    
+
 
     if (carousel) {
-      var  x0 = Math.cos(this.posstep/this.speed)
-      var  y0 = Math.sin(this.posstep/this.speed)
-      var  x1 = Math.cos(this.posstep/this.speed +Math.PI/this.qtty_items*2)
-      var  y1 = Math.sin(this.posstep/this.speed+ Math.PI/this.qtty_items*2)
-      var  x2 = Math.cos(this.posstep/this.speed + Math.PI/this.qtty_items*2*2)
-      var  y2 = Math.sin(this.posstep/this.speed + Math.PI/this.qtty_items*2*2)
-      var  x3 = Math.cos(this.posstep/this.speed + Math.PI/this.qtty_items*3*2)
-      var  y3 = Math.sin(this.posstep/this.speed + Math.PI/this.qtty_items*3*2)
+      var x0 = Math.cos(this.posstep / this.speed)
+      var y0 = Math.sin(this.posstep / this.speed)
+      var x1 = Math.cos(this.posstep / this.speed + Math.PI / this.qtty_items * 2)
+      var y1 = Math.sin(this.posstep / this.speed + Math.PI / this.qtty_items * 2)
+      var x2 = Math.cos(this.posstep / this.speed + Math.PI / this.qtty_items * 2 * 2)
+      var y2 = Math.sin(this.posstep / this.speed + Math.PI / this.qtty_items * 2 * 2)
+      var x3 = Math.cos(this.posstep / this.speed + Math.PI / this.qtty_items * 3 * 2)
+      var y3 = Math.sin(this.posstep / this.speed + Math.PI / this.qtty_items * 3 * 2)
       // var  x4 = Math.cos(this.posstep/this.speed + Math.PI/this.qtty_items*4*2)
       // var  y4 = Math.sin(this.posstep/this.speed + Math.PI/this.qtty_items*4*2)
-      
 
-      elementA.style.transform = ` translateX(${this.x_init*x0}vw) translateY(${this.y_init*y0}vh)`
-      elementB.style.transform = ` translateX(${this.x_init*x1}vw) translateY(${this.y_init*y1}vh)`
 
-      elementC.style.transform = ` translateX(${this.x_init*x2}vw) translateY(${this.y_init*y2}vh)`
-      elementD.style.transform = ` translateX(${this.x_init*x3}vw) translateY(${this.y_init*y3}vh)`
+      elementA.style.transform = ` translateX(${this.x_init * x0}vw) translateY(${this.y_init * y0}vh)`
+      elementB.style.transform = ` translateX(${this.x_init * x1}vw) translateY(${this.y_init * y1}vh)`
+
+      elementC.style.transform = ` translateX(${this.x_init * x2}vw) translateY(${this.y_init * y2}vh)`
+      elementD.style.transform = ` translateX(${this.x_init * x3}vw) translateY(${this.y_init * y3}vh)`
       // elementE.style.transform = ` translateX(${this.x_init*x4}vw) translateY(${this.y_init*y4}vh)`
 
 
     }
 
-    this.posstep +=1
+    this.posstep += 1
 
-      
+
 
 
 
   }
 
-  public startCarousel(carousel:any): void {
-    if(!this.carouselStarted){
-    console.log('Start carousel')
-    this.carouselStarted = true;
-    this.carouselInterval = setInterval(() => this.rotateCarousel(carousel), 10);
-  }}
+  public startCarousel(carousel: any): void {
+    if (!this.carouselStarted) {
+      // console.log('Start carousel')
+      this.carouselStarted = true;
+      this.carouselInterval = setInterval(() => this.rotateCarousel(carousel), 10);
+    }
+  }
 
-  stopCarousel(carousel:any): void {
-    if(this.carouselStarted){
+  stopCarousel(carousel: any): void {
+    if (this.carouselStarted) {
       this.carouselStarted = false
-    clearInterval(this.carouselInterval);
+      clearInterval(this.carouselInterval);
 
-  }}
+    }
+  }
 
 
-  async loadChatScript(){
+  async loadChatScript() {
 
     try {
-      
+
       // const response = await fetch('https://vluedotweb-6mv7qugjda-uc.a.run.app/api-key'); 
       // const status = await response.status
       // const { res} = await response.json();
       const script = document.createElement('script');
-      script.src = `http://127.0.0.1:5002/vlueiochat.js?api_key=79de8a4e796940e29f22bdb7ed371d4f`;
+      script.src = `http://127.0.0.1:5002/vlueiochat.js?api_key=79de8a4e796940e29f22bdb7ed371d4f&lang=${LanguageUtils.getLanguage(window)}`;
       script.async = true;
 
       const e = document.getElementById("vlueiochat");
       e?.appendChild(script);
-      
-      
+
+
+
     } catch (error) {
       console.log(error);
     }
@@ -168,9 +197,22 @@ export class VlueioComponent implements OnInit, AfterViewInit {
   }
 
 
+  handleCredentialResponse(response: any,) {
+
+    const token = response.credential;
+    this.loginRequired = false
+    window.localStorage.setItem('googletoken', token)
+    window.localStorage.setItem('vlueio_loginRequired', "false")
+    
+
+    var el  = window.document.getElementById('vlueiochat-input')
+    if (el) el.hidden = this.loginRequired
+
+  }
 
 
-
-
+  validategoogletoken(token: any) {
+    return true 
+  }
 
 }

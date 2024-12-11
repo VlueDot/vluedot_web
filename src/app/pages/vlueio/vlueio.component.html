@@ -25,7 +25,8 @@
             <div class="hero-text">
                 <h1>Vlue IO</h1>
                 <h2 i18n>SaaS and AI solutions for Business Optimization</h2>
-                <p i18n>VlueIO specializes in the development of advanced business applications, integrating SaaS solutions
+                <p i18n>VlueIO specializes in the development of advanced business applications, integrating SaaS
+                    solutions
                     and AI technologies to optimize processes, improve communication and
                     increase productivity in various sectors.</p>
             </div>
@@ -64,10 +65,23 @@
                     <p i18n>VlueIO incorporates Artificial Intelligence to enhance business solutions, facilitating data
                         analysis, predictions and advanced automation.</p>
                 </div>
-                <div class="chat" id = "vlueiochat">
-
+                <div class="chat" id="vlueiochat">
                 </div>
-                
+                <div class="loginbox" [hidden]="!loginRequired" id="google-login-box">
+                    <p style="margin-bottom: 10px !important; font-size: 14px;">Por favor, autentícate para continuar...</p>
+                    <div class="login" style="width: fit-content; margin: auto;" >
+                        <div id="g_id_onload"
+                            data-client_id="946970199837-op0v0spt8vjpf0mmakkeh1cn4rer3hei.apps.googleusercontent.com"
+                            data-context="signin" data-ux_mode="popup" data-callback="handleCredentialResponse"
+                            data-itp_support="true">
+                        </div>
+    
+                        <div class="g_id_signin" data-type="standard" data-shape="pill" data-theme="outline"
+                            data-text="signin_with" data-size="large" data-logo_alignment="left">
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
 
@@ -100,7 +114,8 @@
             <div class="hero-text">
                 <!-- <h1>Vlue IO</h1> -->
                 <h2 i18n>Integration with ERP</h2>
-                <p i18n>We understand the importance of your systems working in a synchronized way. We offer personalized
+                <p i18n>We understand the importance of your systems working in a synchronized way. We offer
+                    personalized
                     integration with your ERP to ensure that information flows continuously and reliably. With this
                     integration, companies can centralize their data and automate the entry and updating of information,
                     from orders and stock to financial reports, achieving a comprehensive management of their
@@ -133,4 +148,3 @@
 
 
 </main>
-
