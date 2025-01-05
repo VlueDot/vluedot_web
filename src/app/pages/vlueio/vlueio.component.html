@@ -1,6 +1,7 @@
-<main class=" vlueio" (mouseover)="playvideo(bglayerVideo);startCarousel(carouselin)"
+<!-- <main class=" vlueio" (mouseover)="playvideo(bglayerVideo);startCarousel(carouselin)"
     (click)="playvideo(bglayerVideo);startCarousel(carouselin)"
-    (touchstart)="playvideo(bglayerVideo);startCarousel(carouselin)">
+    (touchstart)="playvideo(bglayerVideo);startCarousel(carouselin)"> -->
+<main class=" vlueio">
 
     <section class="hero">
 
@@ -17,18 +18,24 @@
             </div>
 
 
-            <div class="bgvideolayer" (mouseover)="playvideo(bglayerVideo)"> </div>
+            <!-- <div class="bgvideolayer" (mouseover)="playvideo(bglayerVideo)"> </div> -->
+            <div class="bgvideolayer"> </div>
 
         </div>
 
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Vlue IO</h1>
-                <h2 i18n>SaaS and AI solutions for Business Optimization</h2>
-                <p i18n>VlueIO specializes in the development of advanced business applications, integrating SaaS
-                    solutions
-                    and AI technologies to optimize processes, improve communication and
-                    increase productivity in various sectors.</p>
+                <h1>Vlue IO</h1><br>
+                <h4><b i18n>SaaS and AI solutions for every Business</b></h4>
+                <p i18n>VlueIO delivers advanced business solutions that leverage artificial intelligence and SaaS
+                    platforms to optimize processes and enhance communication.
+                </p>
+                <br>
+                <h4><b i18n>VCore, an AI-powered middleware platform</b></h4>
+                <p i18n>VCore integrates effortlessly with your existing systems, including ERPs and CRMs, to provide
+                    scalable, customizable solutions that not only boost efficiency but also drive unprecedented
+                    levels of productivity and innovation.
+                </p>
             </div>
 
 
@@ -51,7 +58,8 @@
             </div>
 
 
-            <div class="bgvideolayer" (mouseover)="playvideo(bglayerVideo)"> </div>
+            <!-- <div class="bgvideolayer" (mouseover)="playvideo(bglayerVideo)"> </div> -->
+            <div class="bgvideolayer"> </div>
 
         </div>
 
@@ -64,18 +72,21 @@
                     <h3 i18n>Integrated Artificial Intelligence</h3>
                     <p i18n>VlueIO incorporates Artificial Intelligence to enhance business solutions, facilitating data
                         analysis, predictions and advanced automation.</p>
+
                 </div>
                 <div class="chat" id="vlueiochat">
                 </div>
                 <div class="loginbox" [hidden]="!loginRequired" id="google-login-box">
-                    <p style="margin-bottom: 10px !important; font-size: 14px;">Por favor, autentícate para continuar...</p>
-                    <div class="login" style="width: fit-content; margin: auto;" >
+                    <!-- <div class="loginbox"  id="google-login-box"> -->
+                    <p style="margin-bottom: 10px !important; font-size: 14px;">Por favor, autentícate para continuar...
+                    </p>
+                    <div class="login" style="width: fit-content; margin: auto;">
                         <div id="g_id_onload"
                             data-client_id="946970199837-op0v0spt8vjpf0mmakkeh1cn4rer3hei.apps.googleusercontent.com"
                             data-context="signin" data-ux_mode="popup" data-callback="handleCredentialResponse"
                             data-itp_support="true">
                         </div>
-    
+
                         <div class="g_id_signin" data-type="standard" data-shape="pill" data-theme="outline"
                             data-text="signin_with" data-size="large" data-logo_alignment="left">
                         </div>

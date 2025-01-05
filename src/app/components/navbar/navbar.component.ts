@@ -21,8 +21,21 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentLang = LanguageUtils.getLanguage(window)
+    var href_ = window.location.pathname.split('/')[1]
+   
+    if(this.currentLang != href_ && href_ != "" ) {
+      
+      
+      LanguageUtils.setLanguage(window, href_);
+      var new_route_2 = window.location.href.replace(`/${this.currentLang}/`,`/${href_}/` )
 
-    this.changeNavColor(window.location.pathname.split('/')[2]? window.location.pathname.split('/')[2]: '')
+      window.location.href = new_route_2
+
+
+    }else
+    {
+    LanguageUtils.setLanguage(window, this.currentLang);
+    this.changeNavColor(window.location.pathname.split('/')[2]? window.location.pathname.split('/')[2]: '')}
 
   }
 
@@ -40,7 +53,7 @@ export class NavbarComponent implements OnInit {
   changeLanguage(lang: string): void {
     LanguageUtils.setLanguage(window, lang);
     const new_route = `/${lang}${this.router.url}`
-    // console.log('new route ' + new_route)
+    // console.log('++ new route ' + new_route)
     window.location.href = new_route
 
 

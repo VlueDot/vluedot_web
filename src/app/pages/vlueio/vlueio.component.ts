@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { LanguageUtils } from 'src/utils/language.utils';
 import { CommonModule } from '@angular/common';
 declare var $: any;
@@ -12,6 +12,7 @@ declare var $: any;
   styleUrl: './vlueio.component.scss'
 })
 export class VlueioComponent implements OnInit, AfterViewInit {
+  @ViewChild('carouselin') carouselin!: ElementRef;
 
 
   message: string = '';
@@ -61,10 +62,12 @@ export class VlueioComponent implements OnInit, AfterViewInit {
       var tokenvalidated = this.validategoogletoken(window.localStorage.getItem('googletoken'))
       if (tokenvalidated) {
         this.loginRequired = false
-        
 
-      }else this.loginRequired = true
-    } 
+
+      } else this.loginRequired = true
+    }
+
+
 
   }
 
@@ -85,7 +88,7 @@ export class VlueioComponent implements OnInit, AfterViewInit {
           videoElement[i].muted = true;
 
         } catch (error) {
-          console.log(videoElement[i], error)
+          console.error(videoElement[i], error)
         }
 
 
@@ -94,28 +97,48 @@ export class VlueioComponent implements OnInit, AfterViewInit {
     catch (e) { "VideoError:" + console.log(e) }
 
 
+    try {
+
+      this.startCarousel(this.carouselin.nativeElement)
+    }
+    catch (e) { "CaurouselError:" + console.log(e) }
+
+
+
+
 
     this.loadChatScript();
     (window as any).handleCredentialResponse = this.handleCredentialResponse.bind(this);
     // console.log('Callback registrado:', (window as any).handleCredentialResponse);
 
 
-    if(this.tokenvalidated){
-      var el  = window.document.getElementById('credential_picker_container')
+    if (this.tokenvalidated) {
+      var el = window.document.getElementById('credential_picker_container')
       console.log('ffff')
       console.log(el)
       if (el) el.hidden = true
     }
 
+
+   
+
+
   }
 
-  Requiredlogin(window:any): void {
+  sendMessageJs(window: any): void {
+
+    const loginEvent = new Event('gmaillogged');
+    let success = window.dispatchEvent(loginEvent);
+
+
+  }
+
+  Requiredlogin(window: any): void {
     this.loginRequired = true
     window.document.getElementById('vlueiochat-input').hidden = this.loginRequired
   }
 
   rotateCarousel(carousel: any): void {
-
 
     const elementA = carousel.querySelector('.a') as HTMLElement;
     const elementB = carousel.querySelector('.b') as HTMLElement;
@@ -151,16 +174,13 @@ export class VlueioComponent implements OnInit, AfterViewInit {
     this.posstep += 1
 
 
-
-
-
   }
 
   public startCarousel(carousel: any): void {
     if (!this.carouselStarted) {
       // console.log('Start carousel')
       this.carouselStarted = true;
-      this.carouselInterval = setInterval(() => this.rotateCarousel(carousel), 10);
+      this.carouselInterval = setInterval(() => this.rotateCarousel(carousel), 20);
     }
   }
 
@@ -177,15 +197,19 @@ export class VlueioComponent implements OnInit, AfterViewInit {
 
     try {
 
-      // const response = await fetch('https://vluedotweb-6mv7qugjda-uc.a.run.app/api-key'); 
-      // const status = await response.status
-      // const { res} = await response.json();
+      const root = 'http://127.0.0.1:5002/vlueiochat.js'
+      // const root = 'https://vlueiochat.web.app'
+
       const script = document.createElement('script');
-      script.src = `http://127.0.0.1:5002/vlueiochat.js?api_key=79de8a4e796940e29f22bdb7ed371d4f&lang=${LanguageUtils.getLanguage(window)}`;
+      const vlueio_APIKEY = 'c3f4a4b7b9ac4e6e8e4fe420f28db723'
+
+      script.src = `${root}?api_key=${vlueio_APIKEY}&lang=${LanguageUtils.getLanguage(window)}`;
       script.async = true;
 
       const e = document.getElementById("vlueiochat");
       e?.appendChild(script);
+
+
 
 
 
@@ -203,16 +227,18 @@ export class VlueioComponent implements OnInit, AfterViewInit {
     this.loginRequired = false
     window.localStorage.setItem('googletoken', token)
     window.localStorage.setItem('vlueio_loginRequired', "false")
-    
 
-    var el  = window.document.getElementById('vlueiochat-input')
+    this.sendMessageJs(window)
+
+
+    var el = window.document.getElementById('vlueiochat-input')
     if (el) el.hidden = this.loginRequired
 
   }
 
 
   validategoogletoken(token: any) {
-    return true 
+    return true
   }
 
 }
