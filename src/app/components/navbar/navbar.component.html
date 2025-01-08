@@ -1,5 +1,5 @@
 <header>
-    <div class="navbar row" [ngStyle]="{color: this.textColor}" >
+    <div class="navbar row" [ngStyle]="{color: this.textColor}">
         <div class="col-3 navbarcol">
             <div class="logo" (click)="changepage('')">Vluedot</div>
         </div>
@@ -24,7 +24,8 @@
             <a href="https://api.whatsapp.com/send/?phone=%2B51983569250&text&type=phone_number&app_absent=0"
                 target="_blank" rel="noopener noreferrer" class="action_btn" i18n>Contact Now</a>
         </div>
-        <div class="toggle_btn col-3" (click)="openmenu(dropdown_menu)"><i class="fa-solid fa-bars"></i></div>
+        <div class="toggle_btn col-3" (click)="openmenu(dropdown_menu,bcktggle)"><i class="fa-solid fa-bars"></i></div>
+
 
         <div class="dropdown_menu" #dropdown_menu>
             <li (click)="changepage('')">Home</li>
@@ -39,5 +40,10 @@
 
             </li>
         </div>
+        <div #bcktggle class="bgtggle" (click)="openmenu(dropdown_menu,bcktggle)">
+                
+        </div>
+
+
     </div>
 </header>

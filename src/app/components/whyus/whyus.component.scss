@@ -1,37 +1,43 @@
 .vlueiohomesection {
-    height: 30vh;
-    min-height: 750px !important;
-    background-color: white;
+    background-color: black;
 }
 
 
 .vlueiohome {
     height: 100%;
     width: 100%;
-
+    position: relative;
     z-index: 1;
     display: flex;
     place-content: center;
     place-items: center;
 }
 
+.vlueiohome .bgvid {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+}
+
 .vlueiohome .bgvideoitem {
-    height: 760px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center center;
     opacity: 1;
     z-index: 1;
-    position: absolute;
-    filter: brightness(40%);
+    filter: brightness(60%);
+    padding: 0;
 
 }
 
 .vlueiohome .content {
-    position: absolute;
+    position: relative;
     z-index: 1 !important;
-    margin: 50px 80px !important;
+    padding: 100px 80px !important;
     text-align: center;
+    height: 100%;
 
 
 }
@@ -136,6 +142,8 @@ svg g path {
     justify-items: center;
     text-align: center !important;
     padding: 10px 30px 40px !important;
+    max-width: 450px;
+    margin: auto;
 
 
 }
@@ -144,37 +152,14 @@ svg g path {
 .buttcontactus {
     align-items: center;
     text-align: center;
-    padding: 50px 0px 10px !important;
+    padding: 50px 0px 5px !important;
 }
 
-
-@media (max-width: 950px) {
-
-    .vlueiohomesection {
-        min-height: 950px !important
-    }
-
-    .vlueiohome .bgvideoitem {
-        min-height: 950px !important;
-    }
-
-
-}
 
 
 
 
 @media (max-width: 700px) {
-
-    .vlueiohomesection {
-        min-height: 1000px !important
-    }
-
-    // .card{ width: 95%!important;}
-
-    .vlueiohome .bgvideoitem {
-        min-height: 1000px !important;
-    }
 
 
     .vlueiohome .content {

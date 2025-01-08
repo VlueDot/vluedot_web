@@ -197,8 +197,8 @@ export class VlueioComponent implements OnInit, AfterViewInit {
 
     try {
 
-      const root = 'http://127.0.0.1:5002/vlueiochat.js'
-      // const root = 'https://vlueiochat.web.app'
+      // const root = 'http://127.0.0.1:5002/vlueiochat.js'
+      const root = 'https://vlueiochat.web.app'
 
       const script = document.createElement('script');
       const vlueio_APIKEY = 'c3f4a4b7b9ac4e6e8e4fe420f28db723'

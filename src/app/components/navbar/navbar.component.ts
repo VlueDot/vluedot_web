@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LanguageUtils } from 'src/utils/language.utils';
 import { CommonModule } from '@angular/common';
+declare var $: any;
 
 
 @Component({
@@ -41,9 +42,12 @@ export class NavbarComponent implements OnInit {
 
 
   private dropdown_menu_stat = "closed"
-  public openmenu(dropdown_menu: HTMLElement): void {
-    if (this.dropdown_menu_stat == "closed") { dropdown_menu.style.display = 'block'; this.dropdown_menu_stat = "opened" }
-    else { dropdown_menu.style.display = 'none'; this.dropdown_menu_stat = "closed" }
+  public openmenu(dropdown_menu: HTMLElement, bcktggle: HTMLElement): void {
+    if (this.dropdown_menu_stat == "closed") { 
+      dropdown_menu.style.display = 'block'; this.dropdown_menu_stat = "opened" ; bcktggle.style.display = 'block'
+    
+    }
+    else { dropdown_menu.style.display = 'none'; this.dropdown_menu_stat = "closed"; bcktggle.style.display = 'none' }
 
 
     console.log('open menu' + dropdown_menu.style)
@@ -64,6 +68,10 @@ export class NavbarComponent implements OnInit {
   
   public changepage(route: string): void {
     this.router.navigate([`/${route}`]);
+    if($('.dropdown_menu')[0].style.display == 'block') {
+      $('.dropdown_menu')[0].style.display = 'none'
+      $('.bgtggle')[0].style.display
+    }
     this.changeNavColor(route)
     
   }

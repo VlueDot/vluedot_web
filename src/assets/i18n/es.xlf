@@ -23,7 +23,7 @@
         <target>Soluciones SaaS e IA para la Optimización Empresarial</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">13,14</context>
+          <context context-type="linenumber">15,16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6176811191189831796" datatype="html">
@@ -31,7 +31,7 @@
         <target>VlueIO es un ecosistema SaaS de vanguardia diseñado para empresas de diversas industrias, que ofrece soluciones modulares y escalables para optimizar operaciones, mejorar la comunicación y agilizar los flujos de trabajo. Nuestros servicios están diseñados para transformar y optimizar la forma en que las empresas operan, adaptándose a las necesidades de cada sector.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">14,16</context>
+          <context context-type="linenumber">16,20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4484494795002456491" datatype="html">
@@ -39,7 +39,7 @@
         <target>Seguimiento de Operaciones</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">40,41</context>
+          <context context-type="linenumber">46,47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1762415340626116056" datatype="html">
@@ -47,7 +47,7 @@
         <target>Santino Ops permite el seguimiento en tiempo real del estado de las tareas operativas, enviando actualizaciones automáticas basadas en correos electrónicos y otras fuentes clave de información.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">41,42</context>
+          <context context-type="linenumber">47,49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5700027100932162832" datatype="html">
@@ -55,7 +55,7 @@
         <target>Sincronizar ERP con Datos Operacionales</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">60,61</context>
+          <context context-type="linenumber">67,68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5471581249693425535" datatype="html">
@@ -63,7 +63,7 @@
         <target>Conectado a ERPs como Odoo, SAP, Oracle, CargoWise, entre otros, el sistema actualiza y organiza la información automáticamente, centralizando la gestión de documentos y datos esenciales.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">61,62</context>
+          <context context-type="linenumber">68,70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9020357569007337313" datatype="html">
@@ -71,7 +71,7 @@
         <target>Gestión de Costos y Gastos</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">95,96</context>
+          <context context-type="linenumber">105,106</context>
         </context-group>
       </trans-unit>
       <trans-unit id="694316135244333034" datatype="html">
@@ -79,7 +79,7 @@
         <target>Santino Ops ayuda en el registro y control de gastos, como el dinero en efectivo en operaciones de campo. Facilita la transparencia, el monitoreo de costos operacionales y la gestión de presupuestos.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">96,97</context>
+          <context context-type="linenumber">106,108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4135323463363436761" datatype="html">
@@ -87,7 +87,7 @@
         <target>Automatización de Procesos</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">130,131</context>
+          <context context-type="linenumber">142,143</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3476204887372736925" datatype="html">
@@ -95,7 +95,7 @@
         <target>Automatiza tareas repetitivas, eliminando ineficiencias y reduciendo significativamente los tiempos de ejecución en procesos administrativos y operacionales. Desencadena productividad al centrarse en lo que importa y es urgente.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">131,133</context>
+          <context context-type="linenumber">143,145</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6015904323216815269" datatype="html">
@@ -103,7 +103,7 @@
         <target>Comunicación Integral</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">171,172</context>
+          <context context-type="linenumber">189,190</context>
         </context-group>
       </trans-unit>
       <trans-unit id="517561415524563583" datatype="html">
@@ -111,7 +111,7 @@
 <target>Santino Ops integra IA para adaptar los mensajes y notificaciones según las necesidades del cliente y de la operación, mejorando la comunicación tanto dentro de la empresa como con los colaboradores y clientes.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">172,174</context>
+          <context context-type="linenumber">190,192</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7843553668200512122" datatype="html">
@@ -119,7 +119,7 @@
 <target>Conozca VlueIO</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
-          <context context-type="linenumber">181,182</context>
+          <context context-type="linenumber">202,203</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6458385561284654416" datatype="html">
@@ -131,7 +131,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
-          <context context-type="linenumber">38,40</context>
+          <context context-type="linenumber">39,41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5145727170312618997" datatype="html">
@@ -149,7 +149,7 @@
 
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/whyus/whyus.component.html</context>
-          <context context-type="linenumber">13,14</context>
+          <context context-type="linenumber">15,16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1126211849506088113" datatype="html">
@@ -157,15 +157,15 @@
        <target>Nos destacamos por nuestro enfoque innovador y nuestra dedicación a la excelencia en cada solución que ofrecemos.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/whyus/whyus.component.html</context>
-          <context context-type="linenumber">14,15</context>
+          <context context-type="linenumber">16,17</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4294482239012726409" datatype="html">
-        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/> Commitment to Quality and Results <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> We work hand in hand with our customers to ensure that our solutions are not only effective, but also generate a clear and measurable return on investment.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Continuous and Evolutionary Support<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> We provide continuous support and adapt our solutions as the needs of the client&apos;s business evolve.</source>
+      <trans-unit id="3614946542144155156" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/> Commitment to Quality and Results <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> We work hand in hand with our customers to ensure that our solutions are not only effective, but also generate a clear and measurable return on investment.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Continuous and Evolutionary Support<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> We provide continuous support and adapt our solutions as the needs of the client&apos;s business evolve. </source>
         <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/> Compromiso con la Calidad y los Resultados<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> Trabajamos de la mano con nuestros clientes para garantizar que nuestras soluciones no solo sean efectivas, sino que también generen un retorno de inversión claro y medible.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Soporte Continuo y Evolutivo<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> Ofrecemos soporte constante y adaptamos nuestras soluciones a medida que evolucionan las necesidades del negocio de nuestros clientes.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/whyus/whyus.component.html</context>
-          <context context-type="linenumber">17,22</context>
+          <context context-type="linenumber">20,26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8525213662266893834" datatype="html">
@@ -173,7 +173,7 @@
         <target>Contáctanos</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/whyus/whyus.component.html</context>
-          <context context-type="linenumber">28,29</context>
+          <context context-type="linenumber">33,34</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
@@ -225,7 +225,7 @@
         <target>Soluciones SaaS e IA para todo Negocio</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5000302955594098693" datatype="html">
@@ -241,7 +241,7 @@
 <target>VCore, una plataforma middleware impulsada por IA</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">34,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4031985422557372575" datatype="html">

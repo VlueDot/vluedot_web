@@ -1,15 +1,23 @@
-.vlueiohomesection {
-    height: 80vh;
-    min-height: calc(1582px - (21.6vw));
-}
+// .vlueiohomesection {
+
+//     height: calc(1582px - (21.6vw));
+// }
 
 
 .vlueiohome {
     height: 100%;
     width: 100%;
-    position: static;
+    // position: static;
     z-index: 1;
-    display: block;
+    position: relative;
+
+
+}
+
+.vlueiohome .bgvid {
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 .vlueiohome .bgvideoitem {
@@ -19,15 +27,15 @@
     object-position: center center;
     opacity: 1;
     z-index: 1;
-    position: absolute;
-    filter: brightness(40%);
+    // position: absolute;
+    filter: brightness(60%);
 
 }
 
 .vlueiohome .content {
-    position: absolute;
-    z-index: 2 !important;
-    margin: 100px 80px !important;
+    position: sticky;
+    // z-index: 2 !important;
+    padding: 100px 80px !important;
 }
 
 .vlueiohomecontent {
@@ -48,8 +56,8 @@
     margin-bottom: 30px !important;
 }
 
-.vlueiohome h3{
-    font-size: 20px!important;
+.vlueiohome h3 {
+    font-size: 20px !important;
 
 }
 
@@ -73,7 +81,7 @@
     // height: 250px !important;
     width: 33.3%;
     height: 100%;
-    min-width: 265px!important;
+    min-width: 265px !important;
     text-align: center !important;
     background-color: transparent;
 
@@ -120,45 +128,80 @@ svg g path {
     position: relative;
     z-index: 2;
     align-content: center;
-justify-items: center;
-text-align: center!important;
-padding: 10px 30px 40px !important;
+    justify-items: center;
+    text-align: center !important;
+    padding: 10px 30px 40px !important;
+    max-width: 450px;
+    margin: auto;
 
 
 }
+
 
 
 
 @media (max-width: 955px) {
 
-    .vlueiohomesection {  min-height: 1800px
+    .card {
+        width: 50% !important;
     }
-.card{ width: 50%!important;}
-    
+
 
 }
 
-@media (max-width: 820px) {.vlueiohomesection {  min-height: 2050px
-}}
+@media (max-width: 820px) {
+
+    .vlueiohomesection {
+        min-height: calc(2804px - (112vw));
+    }
+}
+
+
 
 @media (max-width: 690px) {
 
-    .vlueiohomesection {  min-height: 2550px
+    .card {
+        width: 90% !important;
     }
-    .card{ width: 90%!important;}
-    
-    
 
 }
 
 @media (max-width: 580px) {
 
-    .vlueiohomesection {  min-height: 2500px
+
+    .card {
+        width: 90% !important;
     }
-    
-    .card{ width: 95%!important;}
-    
-    .vlueiohome .content { 
-        margin: 100px 20px !important;}
+
+    .card .text p {
+        padding: 12px 0 15px !important;
+        letter-spacing: .02rem;
+
+    }
+
+    .vlueiohome .content {
+        padding: 100px 25px !important;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    // .vlueiohomesection {
+    //     // height: 80vh;
+    //     min-height: calc(4926px - (536vw));
+    // }
+
+    .card .text p {
+        padding: 12px 0 15px !important;
+        letter-spacing: .02rem;
+
+    }
+
+    .vlueiohome .content {
+        padding: 100px 25px !important;
+    }
+
 
 }

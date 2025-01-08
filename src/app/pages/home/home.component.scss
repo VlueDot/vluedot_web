@@ -74,7 +74,7 @@
 
 .hero .hero-content {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
 }
 
 
@@ -148,6 +148,27 @@
         padding: 80px !important;
     }
 
+
+
+}
+
+@media (max-width: 500px) {
+
+    .visionsection{
+        background-color: #000!important;
+color: #fff;
+width: 100%;
+min-height: 555px;
+margin: 0;
+    }
+
+    .visionsection  .container{
+        align-content: center;
+        justify-content: center;
+        text-align: start;
+        width: fit-content;
+        padding: 80px 40px !important;
+    }
 
 
 }
