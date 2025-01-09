@@ -114,7 +114,7 @@ export class VlueioComponent implements OnInit, AfterViewInit {
 
     if (this.tokenvalidated) {
       var el = window.document.getElementById('credential_picker_container')
-      console.log('ffff')
+      // console.log('ffff')
       console.log(el)
       if (el) el.hidden = true
     }
