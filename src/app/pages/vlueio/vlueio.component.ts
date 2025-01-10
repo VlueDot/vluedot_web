@@ -135,7 +135,8 @@ export class VlueioComponent implements OnInit, AfterViewInit {
 
   Requiredlogin(window: any): void {
     this.loginRequired = true
-    window.document.getElementById('vlueiochat-input').hidden = this.loginRequired
+    window.document.getElementById('vlueiochat-sendmessages').hidden = this.loginRequired
+    // window.document.getElementById('vlueiochat-input').hidden = this.loginRequired
   }
 
   rotateCarousel(carousel: any): void {
@@ -231,8 +232,11 @@ export class VlueioComponent implements OnInit, AfterViewInit {
     this.sendMessageJs(window)
 
 
-    var el = window.document.getElementById('vlueiochat-input')
+    var el = window.document.getElementById('vlueiochat-sendmessages')
+    // var el = window.document.getElementById('vlueiochat-input')
     if (el) el.hidden = this.loginRequired
+
+
 
   }
 

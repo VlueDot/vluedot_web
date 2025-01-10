@@ -268,6 +268,14 @@
           <context context-type="linenumber">73,74</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="6662546550807123408" datatype="html">
+        <source>Log in to continue. </source>
+<target>Por favor, inicia sesión para continuar.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="1337902733296275050" datatype="html">
         <source>Integration with ERP</source>
         <target>Integración con ERP</target>
