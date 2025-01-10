@@ -23,6 +23,11 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.currentLang = LanguageUtils.getLanguage(window)
     var href_ = window.location.pathname.split('/')[1]
+    var actualroute = window.location.pathname.split('/')[2]
+    console.log("actualroute: ", actualroute)
+    this.hidelink(actualroute)
+    
+
    
     if(this.currentLang != href_ && href_ != "" ) {
       
@@ -65,6 +70,24 @@ export class NavbarComponent implements OnInit {
 
   }
   
+
+  hidelink(link:string):void{
+    if(link==""){
+      $('.homelink')[0].style.display = 'none'
+      $('.homelink')[1].style.display = 'none'
+
+      $('.vlueiolink')[0].style.display = 'flex'
+      $('.vlueiolink')[1].style.display = 'flex'
+    }
+    else if(link=="vlueio"){
+
+      $('.homelink')[0].style.display = 'flex'
+      $('.homelink')[1].style.display = 'flex'
+
+      $('.vlueiolink')[0].style.display = 'none'
+      $('.vlueiolink')[1].style.display = 'none'
+    }
+  }
   
   public changepage(route: string): void {
     this.router.navigate([`/${route}`]);
@@ -73,6 +96,12 @@ export class NavbarComponent implements OnInit {
       $('.bgtggle')[0].style.display
     }
     this.changeNavColor(route)
+
+    console.log("actualroute2: ", route)
+    this.hidelink(route)
+
+    
+
     
   }
   public changeNavColor(route: string): void {

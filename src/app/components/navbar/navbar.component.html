@@ -6,8 +6,8 @@
 
         <div class="col-4 nav-links">
             <ul class="links">
-                <li (click)="changepage('')">Home</li>
-                <li (click)="changepage('vlueio')">Vlue IO</li>
+                <li class="homelink" (click)="changepage('')">Home</li>
+                <li class="vlueiolink" (click)="changepage('vlueio')">Vlue IO</li>
             </ul>
         </div>
         <div class="col-2 lang-selector">
@@ -28,8 +28,8 @@
 
 
         <div class="dropdown_menu" #dropdown_menu>
-            <li (click)="changepage('')">Home</li>
-            <li (click)="changepage('vlueio')">Vlue IO</li>
+            <li class="homelink" (click)="changepage('')">Home</li>
+            <li class="vlueiolink" (click)="changepage('vlueio')">Vlue IO</li>
             <li *ngIf="this.currentLang == 'es'; else esp_option2" (click)="changeLanguage('en')">English version</li>
             <ng-template #esp_option2>
                 <li (click)="changeLanguage('es')">Version en español</li>
