@@ -23,8 +23,8 @@
           <context context-type="linenumber">15,16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6176811191189831796" datatype="html">
-        <source>VlueIO is a cutting-edge SaaS ecosystem tailored for businesses across various industries, providing modular and scalable solutions to optimize operations, enhance communication, and streamline workflows. Our services are designed to transform and optimize the way companies operate, adapting to the needs of each sector.</source>
+      <trans-unit id="4367360991097759455" datatype="html">
+        <source>Vlue iO is a cutting-edge SaaS ecosystem tailored for businesses across various industries, providing modular and scalable solutions to optimize operations, enhance communication, and streamline workflows. Our services are designed to transform and optimize the way companies operate, adapting to the needs of each sector.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
           <context context-type="linenumber">16,20</context>
@@ -37,8 +37,8 @@
           <context context-type="linenumber">46,47</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1762415340626116056" datatype="html">
-        <source>Santino Ops allows real-time tracking of the status of operational tasks, sending automatic updates based on emails and other key sources of information.</source>
+      <trans-unit id="1373559013697410201" datatype="html">
+        <source>Vlue iO Core (VCore) allows real-time tracking of the status of operational tasks, sending automatic updates based on emails and other key sources of information.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
           <context context-type="linenumber">47,49</context>
@@ -65,8 +65,8 @@
           <context context-type="linenumber">105,106</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="694316135244333034" datatype="html">
-        <source>Santino Ops helps the registration and control of expenses, such as cash in field operations. Facilitates transparency, monitoring of operating costs and budget management</source>
+      <trans-unit id="4471325681782870321" datatype="html">
+        <source>VCore helps the registration and control of expenses, such as cash in field operations. Facilitates transparency, monitoring of operating costs and budget management</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
           <context context-type="linenumber">106,108</context>
@@ -93,15 +93,15 @@
           <context context-type="linenumber">189,190</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="517561415524563583" datatype="html">
-        <source>Santino Ops integrates AI to adapt messages and notifications according to the needs of the customer and the operation, improving communication both within the company and with collaborators and customers.</source>
+      <trans-unit id="4366278620326191036" datatype="html">
+        <source>VCore integrates AI to adapt messages and notifications according to the needs of the customer and the operation, improving communication both within the company and with collaborators and customers.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
           <context context-type="linenumber">190,192</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7843553668200512122" datatype="html">
-        <source>Meet VlueIO </source>
+      <trans-unit id="593595500088109419" datatype="html">
+        <source>Meet Vlue iO </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
           <context context-type="linenumber">202,203</context>
@@ -154,7 +154,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
-          <context context-type="linenumber">45,46</context>
+          <context context-type="linenumber">45,47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2120954828714997461" datatype="html">
@@ -175,21 +175,21 @@
         <source>OUR VISION</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
-          <context context-type="linenumber">72,73</context>
+          <context context-type="linenumber">80,81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7398764675467057697" datatype="html">
         <source>We are transforming the way companies use technology to optimize their processes.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
-          <context context-type="linenumber">73,74</context>
+          <context context-type="linenumber">81,82</context>
         </context-group>
       </trans-unit>
       <trans-unit id="182291870416939522" datatype="html">
         <source>We focus on the creation of customized business software, which integrates artificial intelligence, data analysis and process automation to improve the operational efficiency of our customers, reduce their costs and simplify their management.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
-          <context context-type="linenumber">74,77</context>
+          <context context-type="linenumber">82,85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5687373352964380059" datatype="html">
@@ -199,8 +199,8 @@
           <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5000302955594098693" datatype="html">
-        <source>VlueIO delivers advanced business solutions that leverage artificial intelligence and SaaS platforms to optimize processes and enhance communication. </source>
+      <trans-unit id="4495876373532084886" datatype="html">
+        <source>Vlue iO delivers advanced business solutions that leverage artificial intelligence and SaaS platforms to optimize processes and enhance communication. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
           <context context-type="linenumber">30,31</context>
@@ -227,15 +227,15 @@
           <context context-type="linenumber">72,73</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1592026689143229175" datatype="html">
-        <source>VlueIO incorporates Artificial Intelligence to enhance business solutions, facilitating data analysis, predictions and advanced automation.</source>
+      <trans-unit id="7247881579342385402" datatype="html">
+        <source>Vlue iO incorporates Artificial Intelligence to enhance business solutions, facilitating data analysis, predictions and advanced automation.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
           <context context-type="linenumber">73,74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6662546550807123408" datatype="html">
-        <source>Log in to continue. </source>
+        <source>Log in to continue... </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
           <context context-type="linenumber">81,82</context>

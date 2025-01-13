@@ -26,9 +26,9 @@
           <context context-type="linenumber">15,16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6176811191189831796" datatype="html">
-        <source>VlueIO is a cutting-edge SaaS ecosystem tailored for businesses across various industries, providing modular and scalable solutions to optimize operations, enhance communication, and streamline workflows. Our services are designed to transform and optimize the way companies operate, adapting to the needs of each sector.</source>
-        <target>VlueIO es un ecosistema SaaS de vanguardia diseñado para empresas de diversas industrias, que ofrece soluciones modulares y escalables para optimizar operaciones, mejorar la comunicación y agilizar los flujos de trabajo. Nuestros servicios están diseñados para transformar y optimizar la forma en que las empresas operan, adaptándose a las necesidades de cada sector.</target>
+      <trans-unit id="4367360991097759455" datatype="html">
+        <source>Vlue iO is a cutting-edge SaaS ecosystem tailored for businesses across various industries, providing modular and scalable solutions to optimize operations, enhance communication, and streamline workflows. Our services are designed to transform and optimize the way companies operate, adapting to the needs of each sector.</source>
+        <target>Vlue iO es un ecosistema SaaS de vanguardia diseñado para empresas de diversas industrias, que ofrece soluciones modulares y escalables para optimizar operaciones, mejorar la comunicación y agilizar los flujos de trabajo. Nuestros servicios están diseñados para transformar y optimizar la forma en que las empresas operan, adaptándose a las necesidades de cada sector.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
           <context context-type="linenumber">16,20</context>
@@ -42,9 +42,9 @@
           <context context-type="linenumber">46,47</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1762415340626116056" datatype="html">
-        <source>Santino Ops allows real-time tracking of the status of operational tasks, sending automatic updates based on emails and other key sources of information.</source>
-        <target>Santino Ops permite el seguimiento en tiempo real del estado de las tareas operativas, enviando actualizaciones automáticas basadas en correos electrónicos y otras fuentes clave de información.</target>
+      <trans-unit id="1373559013697410201" datatype="html">
+        <source>Vlue iO Core (VCore) allows real-time tracking of the status of operational tasks, sending automatic updates based on emails and other key sources of information.</source>
+        <target>Vlue iO permite el seguimiento en tiempo real del estado de las tareas operativas, enviando actualizaciones automáticas basadas en correos electrónicos y otras fuentes clave de información.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
           <context context-type="linenumber">47,49</context>
@@ -74,9 +74,9 @@
           <context context-type="linenumber">105,106</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="694316135244333034" datatype="html">
-        <source>Santino Ops helps the registration and control of expenses, such as cash in field operations. Facilitates transparency, monitoring of operating costs and budget management</source>
-        <target>Santino Ops ayuda en el registro y control de gastos, como el dinero en efectivo en operaciones de campo. Facilita la transparencia, el monitoreo de costos operacionales y la gestión de presupuestos.</target>
+      <trans-unit id="4471325681782870321" datatype="html">
+        <source>VCore helps the registration and control of expenses, such as cash in field operations. Facilitates transparency, monitoring of operating costs and budget management</source>
+        <target>VCore ayuda en el registro y control de gastos, como el dinero en efectivo en operaciones de campo. Facilita la transparencia, el monitoreo de costos operacionales y la gestión de presupuestos.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
           <context context-type="linenumber">106,108</context>
@@ -106,17 +106,17 @@
           <context context-type="linenumber">189,190</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="517561415524563583" datatype="html">
-        <source>Santino Ops integrates AI to adapt messages and notifications according to the needs of the customer and the operation, improving communication both within the company and with collaborators and customers.</source>
-<target>Santino Ops integra IA para adaptar los mensajes y notificaciones según las necesidades del cliente y de la operación, mejorando la comunicación tanto dentro de la empresa como con los colaboradores y clientes.</target>
+      <trans-unit id="4366278620326191036" datatype="html">
+        <source>VCore integrates AI to adapt messages and notifications according to the needs of the customer and the operation, improving communication both within the company and with collaborators and customers.</source>
+        <target>VCore integra IA para adaptar los mensajes y notificaciones según las necesidades del cliente y de la operación, mejorando la comunicación tanto dentro de la empresa como con los colaboradores y clientes.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
           <context context-type="linenumber">190,192</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7843553668200512122" datatype="html">
-        <source>Meet VlueIO </source>
-<target>Conozca VlueIO</target>
+      <trans-unit id="593595500088109419" datatype="html">
+        <source>Meet Vlue iO </source>
+        <target>Conozca Vlue iO</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home-vlueio/home-vlueio.component.html</context>
           <context context-type="linenumber">202,203</context>
@@ -124,7 +124,7 @@
       </trans-unit>
       <trans-unit id="6458385561284654416" datatype="html">
         <source>Contact Now</source>
-<target>Contacta Ahora</target>
+        <target>Contacta Ahora</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
           <context context-type="linenumber">25,26</context>
@@ -177,12 +177,12 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
-          <context context-type="linenumber">45,46</context>
+          <context context-type="linenumber">45,47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2120954828714997461" datatype="html">
         <source>Innovation for Business Optimization</source>
-<target>Innovación para la Optimización Empresarial</target>
+        <target>Innovación para la Optimización Empresarial</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
           <context context-type="linenumber">39,40</context>
@@ -190,7 +190,7 @@
       </trans-unit>
       <trans-unit id="8074786656656843160" datatype="html">
         <source>We build intelligent software to empower businesses and transform industries.</source>
-<target>Construimos software inteligente para empoderar a las empresas y transformar industrias.</target>
+        <target>Construimos software inteligente para empoderar a las empresas y transformar industrias.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
           <context context-type="linenumber">40,41</context>
@@ -198,26 +198,26 @@
       </trans-unit>
       <trans-unit id="4776941591063994626" datatype="html">
         <source>OUR VISION</source>
-<target>NUESTRA VISIÓN</target>
+        <target>NUESTRA VISIÓN</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
-          <context context-type="linenumber">72,73</context>
+          <context context-type="linenumber">80,81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7398764675467057697" datatype="html">
         <source>We are transforming the way companies use technology to optimize their processes.</source>
-<target>Estamos transformando la forma en que las empresas utilizan la tecnología para optimizar sus procesos.</target>
+        <target>Estamos transformando la forma en que las empresas utilizan la tecnología para optimizar sus procesos.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
-          <context context-type="linenumber">73,74</context>
+          <context context-type="linenumber">81,82</context>
         </context-group>
       </trans-unit>
       <trans-unit id="182291870416939522" datatype="html">
         <source>We focus on the creation of customized business software, which integrates artificial intelligence, data analysis and process automation to improve the operational efficiency of our customers, reduce their costs and simplify their management.</source>
-<target>Nos enfocamos en la creación de software empresarial personalizado, que integra inteligencia artificial, análisis de datos y automatización de procesos para mejorar la eficiencia operativa de nuestros clientes, reducir sus costos y simplificar su gestión.</target>
+        <target>Nos enfocamos en la creación de software empresarial personalizado, que integra inteligencia artificial, análisis de datos y automatización de procesos para mejorar la eficiencia operativa de nuestros clientes, reducir sus costos y simplificar su gestión.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
-          <context context-type="linenumber">74,77</context>
+          <context context-type="linenumber">82,85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5687373352964380059" datatype="html">
@@ -228,9 +228,9 @@
           <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5000302955594098693" datatype="html">
-        <source>VlueIO delivers advanced business solutions that leverage artificial intelligence and SaaS platforms to optimize processes and enhance communication. </source>
-<target>VlueIO ofrece soluciones empresariales avanzadas que aprovechan la inteligencia artificial y plataformas SaaS para optimizar procesos y mejorar la comunicación. </target>
+      <trans-unit id="4495876373532084886" datatype="html">
+        <source>Vlue iO delivers advanced business solutions that leverage artificial intelligence and SaaS platforms to optimize processes and enhance communication. </source>
+        <target>Vlue iO ofrece soluciones empresariales avanzadas que aprovechan la inteligencia artificial y plataformas SaaS para optimizar procesos y mejorar la comunicación. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
           <context context-type="linenumber">30,31</context>
@@ -238,7 +238,7 @@
       </trans-unit>
       <trans-unit id="5136624998677383450" datatype="html">
         <source>VCore, an AI-powered middleware platform</source>
-<target>VCore, una plataforma middleware impulsada por IA</target>
+        <target>VCore, una plataforma middleware impulsada por IA</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
           <context context-type="linenumber">34,35</context>
@@ -246,7 +246,7 @@
       </trans-unit>
       <trans-unit id="4031985422557372575" datatype="html">
         <source>VCore integrates effortlessly with your existing systems, including ERPs and CRMs, to provide scalable, customizable solutions that not only boost efficiency but also drive unprecedented levels of productivity and innovation. </source>
-<target>VCore se integra de manera fluida con tus sistemas existentes, incluidos ERPs y CRMs, proporcionando soluciones escalables y personalizables que no solo mejoran la eficiencia, sino que también impulsan niveles sin precedentes de productividad e innovación.</target>    
+        <target>VCore se integra de manera fluida con tus sistemas existentes, incluidos ERPs y CRMs, proporcionando soluciones escalables y personalizables que no solo mejoran la eficiencia, sino que también impulsan niveles sin precedentes de productividad e innovación.</target>    
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
           <context context-type="linenumber">35,37</context>
@@ -254,23 +254,23 @@
       </trans-unit>
       <trans-unit id="4377572397886688014" datatype="html">
         <source>Integrated Artificial Intelligence</source>
-<target>Inteligencia Artificial Integrada</target>
+        <target>Inteligencia Artificial Integrada</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
           <context context-type="linenumber">72,73</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1592026689143229175" datatype="html">
-        <source>VlueIO incorporates Artificial Intelligence to enhance business solutions, facilitating data analysis, predictions and advanced automation.</source>
-<target>VlueIO incorpora Inteligencia Artificial para mejorar las soluciones empresariales, facilitando el análisis de datos, predicciones y automatización avanzada.</target>
+      <trans-unit id="7247881579342385402" datatype="html">
+        <source>Vlue iO incorporates Artificial Intelligence to enhance business solutions, facilitating data analysis, predictions and advanced automation.</source>
+        <target>Vlue iO incorpora Inteligencia Artificial para mejorar las soluciones empresariales, facilitando el análisis de datos, predicciones y automatización avanzada.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
           <context context-type="linenumber">73,74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6662546550807123408" datatype="html">
-        <source>Log in to continue. </source>
-<target>Por favor, inicia sesión para continuar.</target>
+        <source>Log in to continue... </source>
+        <target>Por favor, inicia sesión para continuar.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/vlueio/vlueio.component.html</context>
           <context context-type="linenumber">81,82</context>
