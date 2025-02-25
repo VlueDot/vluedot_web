@@ -279,3 +279,48 @@ h4 {
 ::Ng-deep main {
     background-color: steelblue!important;
 }
+
+
+@media (max-width: 990px){
+    .landpage{
+        min-height: calc(28.6vw + 914px);
+        .prompt{
+            padding: 0px !important;
+            text-align: center;
+        }
+    }
+    .features{
+        min-height: calc(-49.6vw + 1199px);
+    }
+}
+
+@media (max-width: 500px){
+
+    .features{
+
+        
+                .content{
+                    .prompt{
+                        padding: 0 20px!important;
+                    }
+                }
+            }
+
+}
+
+// @media (max-width: 500px){
+//     .landpage{
+//         min-height: 1200px;
+//         .prompt{
+//             padding: 0px !important;
+//             text-align: center;
+//         }
+//     }
+//     .features{
+//         min-height: 1100px;
+
+//         .prompt{
+//             padding: 0 20px!important;
+//         }
+//     }
+// }
