@@ -1,0 +1,281 @@
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2.1rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+
+
+.action_btn:hover {
+    scale: 1.03 !important;
+    color: white;
+}
+
+.action_btn:active {
+    scale: 0.95 !important;
+}
+
+.landpage {
+    position: relative;
+
+
+
+    .background {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .bgvideoitem {
+        background-color: white;
+        position: absolute;
+        height: calc(100%);
+        width: 100%;
+        top: -80px;
+        object-fit: cover;
+        object-position: center center;
+        opacity: 1;
+        z-index: 1;
+        rotate: 180deg;
+        filter: brightness(0.85);
+        opacity: 0.8;
+
+
+
+
+    }
+
+
+
+    .content {
+        position: relative;
+        height: calc(100vh - 80px);
+        z-index: 2;
+        margin: 0px 8% !important;
+        color: white;
+
+        .prompt {
+            place-content: center;
+            padding-left: 3% !important;
+            padding: 0 50px;
+
+            .prompt-content {
+                margin: 40px 0 !important
+            }
+
+            .startinfo {
+                margin: 0px !important;
+
+                .startdata {
+
+                    padding: 12px;
+
+
+
+                    #phoneNumber {
+                        border-radius: 20px !important;
+                        border-color: white !important;
+                        border-width: 1px solid !important;
+                        margin: 5px 12px !important;
+                        width: 250px;
+                        height: 40px;
+                        text-align: center;
+                    }
+
+
+                    .action_btn {
+
+                        margin: 5px 12px !important;
+                        height: 40px;
+                        width: 250px;
+                        text-align: center;
+                        background-color: orange;
+                        color: white;
+                        border-radius: 20px;
+                        font-size: 0.9rem;
+                        cursor: pointer;
+                        transition: scale 0.2 ease;
+
+                    }
+
+
+
+
+
+                }
+            }
+
+            .terms {
+                place-content: center;
+                padding: 12px !important;
+
+                label {
+                    display: inline;
+                }
+            }
+
+
+        }
+
+
+
+
+        .contentimage {
+            place-content: center;
+            text-align: center;
+        }
+
+        .promptimg {
+            border-radius: 50px !important;
+            width: 100% !important;
+        }
+
+    }
+
+}
+
+.landpage::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    /* Permite interactuar con el video sin interferencia */
+    height: calc(100% + 80px);
+    background: linear-gradient(transparent,
+            rgba(200, 200, 200, 0.97));
+    z-index: 1;
+    backdrop-filter: blur(50px);
+}
+
+.features {
+    position: relative;
+
+
+    .background {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+
+
+        .bgvideoitem {
+            background-color: white;
+            position: absolute;
+            height: calc(100%);
+            width: 100%;
+            top: 0px;
+            object-fit: cover;
+            object-position: center center;
+            opacity: 1;
+            z-index: 1;
+
+            // -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+
+            filter: brightness(0.85);
+            opacity: 0.8;
+
+        }
+    }
+
+
+
+
+    .content {
+        position: relative;
+        height: calc(100vh - 80px);
+        z-index: 2;
+        margin: 0px 8% !important;
+        color: white;
+
+        .media {
+
+            padding: 0px 50px 0px 0px !important;
+
+
+
+
+            .contentvideo {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                /* Hide any overflow */
+                position: relative;
+                place-content: center;
+                padding: 0 !important;
+
+            }
+
+            #contenvideo {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+                border-radius: 50px !important;
+            }
+        }
+
+        .prompt {
+            place-content: center;
+            padding: 0 50px !important;
+            border-color: white;
+            border-style: solid !important;
+            border-width: 2px !important;
+            border-radius: 50px !important;
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.2);
+
+
+            .prompt-content {
+
+                margin: 60px 0 !important;
+                word-spacing: 2px;
+            }
+
+
+            #boxtittle {
+                padding: 0px 0 50px !important;
+                margin: 0px !important;
+            }
+
+
+        }
+
+
+    }
+
+}
+
+
+.features::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    /* Ajusta el alto del gradiente */
+    height: 100%;
+    background: linear-gradient(rgba(200, 200, 200, 0.97), transparent);
+    pointer-events: none;
+    z-index: 1;
+    backdrop-filter: blur(50px);
+
+}
+
+
+
+::Ng-deep main {
+    background-color: deepskyblue;
+}

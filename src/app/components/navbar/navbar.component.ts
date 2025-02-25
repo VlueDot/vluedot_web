@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LanguageUtils } from 'src/utils/language.utils';
 import { CommonModule } from '@angular/common';
@@ -12,7 +12,7 @@ declare var $: any;
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit,AfterViewInit {
 
   public currentLang: string = 'en';
   public textColor : string = 'black'
@@ -43,6 +43,17 @@ export class NavbarComponent implements OnInit {
     LanguageUtils.setLanguage(window, this.currentLang);
     this.changeNavColor(window.location.pathname.split('/')[2]? window.location.pathname.split('/')[2]: '')}
 
+  }
+
+  ngAfterViewInit(): void {
+
+    this.currentLang = LanguageUtils.getLanguage(window)
+    var href_ = window.location.pathname.split('/')[1]
+    if(href_=='veep'){
+
+      this.changeNavColor('veep')
+    }
+    
   }
 
 
@@ -96,8 +107,6 @@ export class NavbarComponent implements OnInit {
       $('.bgtggle')[0].style.display
     }
     this.changeNavColor(route)
-
-    console.log("actualroute2: ", route)
     this.hidelink(route)
 
     
@@ -105,13 +114,23 @@ export class NavbarComponent implements OnInit {
     
   }
   public changeNavColor(route: string): void {
-    // console.log(`change color for route ${route}`)
+    console.log(`change color for route ${route}`)
     if(route === ''){
       this.textColor = 'black'
      }
     else if (route=== 'vlueio'){
       this.textColor = 'white'
     }
+
+    else if (route == 'veep'){
+      this.textColor = 'white'
+    }
+    else if (route == 'tarius'){
+      this.textColor = 'white'
+    }
+
+
+    
 
 
   }
