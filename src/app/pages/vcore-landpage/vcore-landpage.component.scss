@@ -1,18 +1,18 @@
-h1 {
-    font-size: 3.8rem;
-}
+// h1 {
+//     font-size: 3.8rem;
+// }
 
-h2 {
-    font-size: 2.8rem;
-}
+// h2 {
+//     font-size: 2.8rem;
+// }
 
-h3 {
-    font-size: 2.1rem;
-}
+// h3 {
+//     font-size: 2.1rem;
+// }
 
-h4 {
-    font-size: 1.6rem;
-}
+// h4 {
+//     font-size: 1.6rem;
+// }
 
 
 
@@ -27,19 +27,22 @@ h4 {
 
 .landpage {
     position: relative;
+    padding-bottom: 80px !important;
+    padding-top: 40px !important;
+
 
 
 
     .background {
         position: absolute;
-        height: 100vh;
+        height: auto;
         width: 100vw;
     }
 
     .bgvideoitem {
         background-color: white;
         position: absolute;
-        height: calc(100%);
+        height: auto;
         width: 100%;
         top: -80px;
         object-fit: cover;
@@ -59,15 +62,19 @@ h4 {
 
     .content {
         position: relative;
-        height: calc(100vh - 80px);
+        height: auto;
         z-index: 2;
         margin: 0px 8% !important;
         color: white;
 
+
         .prompt {
             place-content: center;
             padding-left: 3% !important;
-            padding: 0 50px;
+            padding: 0 40px;
+            height: auto;
+        
+
 
             .prompt-content {
                 margin: 40px 0 !important
@@ -79,6 +86,7 @@ h4 {
                 .startdata {
 
                     padding: 12px;
+                    max-width: 600px!important;
 
 
 
@@ -86,8 +94,8 @@ h4 {
                         border-radius: 20px !important;
                         border-color: white !important;
                         border-width: 1px solid !important;
-                        margin: 5px 12px !important;
-                        width: 250px;
+                        margin: 0!important;
+                        // width: 250px;
                         height: 40px;
                         text-align: center;
                     }
@@ -95,9 +103,9 @@ h4 {
 
                     .action_btn {
 
-                        margin: 5px 12px !important;
+                        // margin: 5px 12px !important;
                         height: 40px;
-                        width: 250px;
+                        // width: 250px;
                         text-align: center;
                         background-color: orange;
                         color: white;
@@ -127,6 +135,17 @@ h4 {
 
         }
 
+        @media (max-width: 992px) {
+            .prompt{
+                place-content: center;
+                padding: 0 !important;
+                height: auto;
+                text-align: center;
+            }
+                
+        }
+
+
 
 
 
@@ -136,8 +155,10 @@ h4 {
         }
 
         .promptimg {
-            border-radius: 50px !important;
+            border-radius: 40px !important;
             width: 100% !important;
+            max-width: 400px;
+            max-height: 650px;
         }
 
     }
@@ -161,18 +182,20 @@ h4 {
 
 .features {
     position: relative;
+    padding-bottom: 20px !important;
+    padding-top: 80px !important;
 
 
     .background {
         position: absolute;
-        height: 100vh;
+        height: 100%;
         width: 100vw;
 
 
         .bgvideoitem {
             background-color: white;
             position: absolute;
-            height: calc(100%);
+            height: 100%;
             width: 100%;
             top: 0px;
             object-fit: cover;
@@ -194,14 +217,14 @@ h4 {
 
     .content {
         position: relative;
-        height: calc(100vh - 80px);
+        height: auto;
         z-index: 2;
-        margin: 0px 8% !important;
+        margin: 0px 4.5% !important;
         color: white;
 
         .media {
 
-            padding: 0px 50px 0px 0px !important;
+            padding: 0px 40px 0px 0px !important;
 
 
 
@@ -222,30 +245,31 @@ h4 {
                 height: 100%;
                 object-fit: cover;
                 object-position: center center;
-                border-radius: 50px !important;
+                border-radius: 40px !important;
             }
         }
 
         .prompt {
+            height: 100%;
             place-content: center;
-            padding: 0 50px !important;
+            padding: 0 40px !important;
             border-color: white;
             border-style: solid !important;
             border-width: 2px !important;
-            border-radius: 50px !important;
+            border-radius: 40px !important;
             backdrop-filter: blur(20px);
             background-color: rgba(255, 255, 255, 0.2);
 
 
             .prompt-content {
 
-                margin: 60px 0 !important;
+                margin: 40px 0 !important;
                 word-spacing: 2px;
             }
 
 
             #boxtittle {
-                padding: 0px 0 50px !important;
+                padding: 0px 0 30px !important;
                 margin: 0px !important;
             }
 
@@ -272,6 +296,71 @@ h4 {
     z-index: 1;
     backdrop-filter: blur(50px);
 
+}
+
+.security_block{
+    padding: 0px 20px 0px 0px !important;
+}
+
+.privacy_block{
+    padding: 0px 0px 0px 20px !important;
+}
+
+.block_a {
+    padding: 0px 20px 0px 0px !important;
+}
+
+.block_b {
+    padding: 0px 20px 0px 20px !important;
+}
+
+.block_c {
+    padding: 0px 0px 0px 20px !important;
+}
+
+
+
+@media (max-width: 992px) {
+
+    .block_a {
+        padding: 0px 20px 0px 0px !important;
+    }
+    
+    .block_b {
+        padding: 0px 0px 0px 20px !important;
+    }
+    
+    .block_c {
+        padding: 40px 0px 0px !important;
+        text-align: center;
+    }
+
+    
+
+
+}
+
+@media (max-width: 768px) {
+    .security_block{
+        padding: 0px 0px 20px !important;
+    }
+    
+    .privacy_block{
+        padding: 20px 0px 0px !important;
+    }
+
+    .block_a {
+        padding: 0px 0px 20px !important;
+    }
+    
+    .block_b {
+        padding: 20px 0px !important;
+    }
+    
+    .block_c {
+        padding: 20px 0px !important;
+        text-align: center;
+    }
 }
 
 

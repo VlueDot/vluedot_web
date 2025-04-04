@@ -4,10 +4,11 @@
             <div class="logo" (click)="changepage('')">Vluedot</div>
         </div>
 
-        <div class="col-4 nav-links">
+        <div class="col-4 nav-links" style="  cursor: pointer;">
             <ul class="links">
                 <li class="homelink" (click)="changepage('')">Home</li>
                 <li class="vlueiolink" (click)="changepage('vlueio')">Vlue IO</li>
+                <li class="veeplink" (click)="changepage('veep')">Veep</li>
             </ul>
         </div>
         <div class="col-2 lang-selector">
@@ -27,9 +28,10 @@
         <div class="toggle_btn col-3" (click)="openmenu(dropdown_menu,bcktggle)"><i class="fa-solid fa-bars"></i></div>
 
 
-        <div class="dropdown_menu" #dropdown_menu>
+        <div class="dropdown_menu" #dropdown_menu style="  cursor: pointer;">
             <li class="homelink" (click)="changepage('')">Home</li>
             <li class="vlueiolink" (click)="changepage('vlueio')">Vlue IO</li>
+            <li class="veeplink" (click)="changepage('veep')">Veep</li>
             <li *ngIf="this.currentLang == 'es'; else esp_option2" (click)="changeLanguage('en')">English version</li>
             <ng-template #esp_option2>
                 <li (click)="changeLanguage('es')">Version en español</li>

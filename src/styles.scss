@@ -10,6 +10,7 @@ body {
     background-color: black;
     overflow-x: hidden;
     display: block;
+    font-size: 15px;
 
 
 
@@ -30,7 +31,7 @@ body {
     color: #fff;
     padding: 10px 70px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 5px;
 
 }
@@ -73,4 +74,29 @@ border-width: 1px !important;
   .cta {
     padding: 10px 70px;
   }
+}
+
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p{
+  font-size: 15px;
+}
+
+ul{
+  padding-right: 0px !important;
 }

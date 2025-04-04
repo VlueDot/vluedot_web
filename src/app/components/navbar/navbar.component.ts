@@ -89,6 +89,9 @@ export class NavbarComponent implements OnInit,AfterViewInit {
 
       $('.vlueiolink')[0].style.display = 'flex'
       $('.vlueiolink')[1].style.display = 'flex'
+
+      $('.veeplink')[0].style.display = 'flex'
+      $('.veeplink')[1].style.display = 'flex'
     }
     else if(link=="vlueio"){
 
@@ -97,6 +100,20 @@ export class NavbarComponent implements OnInit,AfterViewInit {
 
       $('.vlueiolink')[0].style.display = 'none'
       $('.vlueiolink')[1].style.display = 'none'
+
+      $('.veeplink')[0].style.display = 'flex'
+      $('.veeplink')[1].style.display = 'flex'
+    }
+    else if(link=="veep"){
+
+      $('.homelink')[0].style.display = 'flex'
+      $('.homelink')[1].style.display = 'flex'
+
+      $('.vlueiolink')[0].style.display = 'flex'
+      $('.vlueiolink')[1].style.display = 'flex'
+
+      $('.veeplink')[0].style.display = 'none'
+      $('.veeplink')[1].style.display = 'none'
     }
   }
   
