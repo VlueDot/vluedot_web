@@ -1,20 +1,3 @@
-// h1 {
-//     font-size: 3.8rem;
-// }
-
-// h2 {
-//     font-size: 2.8rem;
-// }
-
-// h3 {
-//     font-size: 2.1rem;
-// }
-
-// h4 {
-//     font-size: 1.6rem;
-// }
-
-
 
 .action_btn:hover {
     scale: 1.03 !important;
@@ -73,12 +56,14 @@
             padding-left: 3% !important;
             padding: 0 40px;
             height: auto;
-        
+
 
 
             .prompt-content {
                 margin: 40px 0 !important
             }
+
+  
 
             .startinfo {
                 margin: 0px !important;
@@ -86,7 +71,7 @@
                 .startdata {
 
                     padding: 12px;
-                    max-width: 600px!important;
+                    max-width: 600px !important;
 
 
 
@@ -94,7 +79,7 @@
                         border-radius: 20px !important;
                         border-color: white !important;
                         border-width: 1px solid !important;
-                        margin: 0!important;
+                        margin: 0 !important;
                         // width: 250px;
                         height: 40px;
                         text-align: center;
@@ -113,6 +98,17 @@
                         font-size: 0.9rem;
                         cursor: pointer;
                         transition: scale 0.2 ease;
+
+                    }
+
+                    #verifycode {
+                        border-radius: 20px !important;
+                        border-color: white !important;
+                        border-width: 1px solid !important;
+                        margin: 0 !important;
+                        // width: 250px;
+                        height: 40px;
+                        text-align: center;
 
                     }
 
@@ -136,13 +132,20 @@
         }
 
         @media (max-width: 992px) {
-            .prompt{
+            .prompt {
                 place-content: center;
                 padding: 0 !important;
                 height: auto;
                 text-align: center;
+
+                .startinfo{
+                    place-content: center!important;
+                }
+
+              
+
             }
-                
+
         }
 
 
@@ -181,9 +184,11 @@
 }
 
 .features {
+
     position: relative;
     padding-bottom: 20px !important;
     padding-top: 80px !important;
+    z-index: 1;
 
 
     .background {
@@ -298,11 +303,11 @@
 
 }
 
-.security_block{
+.security_block {
     padding: 0px 20px 0px 0px !important;
 }
 
-.privacy_block{
+.privacy_block {
     padding: 0px 0px 0px 20px !important;
 }
 
@@ -325,42 +330,123 @@
     .block_a {
         padding: 0px 20px 0px 0px !important;
     }
-    
+
     .block_b {
         padding: 0px 0px 0px 20px !important;
     }
-    
+
     .block_c {
         padding: 40px 0px 0px !important;
         text-align: center;
     }
 
-    
+
 
 
 }
 
 @media (max-width: 768px) {
-    .security_block{
+    .security_block {
         padding: 0px 0px 20px !important;
     }
-    
-    .privacy_block{
+
+    .privacy_block {
         padding: 20px 0px 0px !important;
     }
 
     .block_a {
         padding: 0px 0px 20px !important;
     }
-    
+
     .block_b {
         padding: 20px 0px !important;
     }
-    
+
     .block_c {
         padding: 20px 0px !important;
         text-align: center;
     }
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: black;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 550px;
+    border-radius: 40px;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 24px;
+    top: 14px;
+}
+
+.verifycodeclass {
+    padding: 0px 6px 0px 12px !important;
+}
+
+.verifybutton {
+    padding: 0px 12px !important;
+}
+
+@media (max-width: 576px) {
+
+
+    .modal-content {
+        background-color: #000;
+        margin: 10% auto;
+        padding: 2rem;
+        width: 370px;
+        border-radius: 40px;
+        font-size: 16px !important;
+        top: 60px;
+
+
+        .close {
+            float: right;
+            cursor: pointer;
+            position: absolute;
+            right: 24px;
+            top: 14px;
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 24px !important;
+        }
+
+        p {
+            font-size: 16px !important;
+        }
+
+
+
+        .verifycodeclass {
+            padding: 0px 12px 0px 12px !important;
+        }
+
+        .verifybutton {
+            padding: 6px 12px 0px !important;
+        }
+
+    }
+
 }
 
 

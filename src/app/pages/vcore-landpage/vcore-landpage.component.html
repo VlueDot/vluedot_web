@@ -32,25 +32,58 @@
 
 
                                 <div class="row" style="place-content: center;">
-                                    <div class="input-group-prepend col-4" style="place-content: center;
-padding-right: 6px !important;">
-                                        <select class="form-select" style="border-radius: 20px !important; ">
+                                    <div class="input-group-prepend col-4"
+                                        style="place-content: center; padding-right: 6px !important;">
+                                        <select class="form-select" style="border-radius: 20px !important; "
+                                            [(ngModel)]="selectedCountryCode">
                                             <option value="+51">🇵🇪 +51</option>
                                         </select>
                                     </div>
                                     <div class="col-8" style="padding: 0px 12px 0px 6px !important;">
-                                        <input type="tel" id="phoneNumber" style="margin-left: 0px !important;
-width: 100%;" placeholder="Enter your phone number" required />
+                                        <input type="tel" id="phoneNumber"
+                                            style="margin-left: 0px !important; width: 100%;"
+                                            placeholder="Enter your phone number" required
+                                            [(ngModel)]="customer_phoneNumber" />
                                     </div>
                                 </div>
 
-                                <div class="row" style="place-content: center;
-padding-top: 12px !important;">
+                                <div class="row" style="place-content: center; padding-top: 12px !important;">
                                     <div class="col">
-                                        <button class="action_btn" style="width: 100%; margin: 0!important" type="submit"
-                                            (click)="startChat()">Start Chat</button>
+                                        <button class="action_btn" style="width: 100%; margin: 0!important"
+                                            type="submit" (click)="send_veep_demo_request()">Start Chat</button>
                                     </div>
 
+                                </div>
+
+                                <div class="modal" [ngStyle]="{ 'display': isModalOpen ? 'block' : 'none' }">
+                                    <div class="modal-content">
+                                        <span class="close" (click)="closeModal()">&times;</span>
+
+
+                                        <h3>Enter your code.</h3>
+                                        <p>Check your WhatsApp and enter the code we sent you.</p>
+
+                                        <div class="row" style="padding-top: 12px !important;">
+                                            <div class="col-12 col-sm-9 verifycodeclass">
+                                                <input type="tel" id="verifycode"
+                                                    style="margin-left: 0px !important; width: 100%;"
+                                                    placeholder="Enter your personal code" required
+                                                    [(ngModel)]="code_to_verify" />
+                                            </div>
+
+                                            <div class="col-12 col-sm-3 verifybutton">
+                                                <button class="action_btn" style="width: 100%; margin: 0!important"
+                                                    type="submit" (click)="verify_code()" [disabled] = "block_send_code">Send Code</button>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-9" style="text-align: center;" [ngStyle]="{ 'display': NotValidCode ? 'block' : 'none' }">
+                                                <p style="color: darkorange; margin: 0;">{{this.modalmessage}}</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>

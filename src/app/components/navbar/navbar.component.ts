@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit,AfterViewInit {
     this.currentLang = LanguageUtils.getLanguage(window)
     var href_ = window.location.pathname.split('/')[1]
     var actualroute = window.location.pathname.split('/')[2]
-    console.log("actualroute: ", actualroute)
+    // console.log("actualroute: ", actualroute)
     this.hidelink(actualroute)
     
 
@@ -66,7 +66,7 @@ export class NavbarComponent implements OnInit,AfterViewInit {
     else { dropdown_menu.style.display = 'none'; this.dropdown_menu_stat = "closed"; bcktggle.style.display = 'none' }
 
 
-    console.log('open menu' + dropdown_menu.style)
+    // console.log('open menu' + dropdown_menu.style)
   }
 
 
@@ -131,7 +131,7 @@ export class NavbarComponent implements OnInit,AfterViewInit {
     
   }
   public changeNavColor(route: string): void {
-    console.log(`change color for route ${route}`)
+    // console.log(`change color for route ${route}`)
     if(route === ''){
       this.textColor = 'black'
      }
@@ -143,6 +143,14 @@ export class NavbarComponent implements OnInit,AfterViewInit {
       this.textColor = 'white'
     }
     else if (route == 'tarius'){
+      this.textColor = 'white'
+    }
+
+    else if (route == 'privacy-policy'){
+      this.textColor = 'white'
+    }
+
+    else if (route == 'terms-of-service'){
       this.textColor = 'white'
     }
 

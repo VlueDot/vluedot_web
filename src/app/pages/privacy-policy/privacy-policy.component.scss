@@ -1,0 +1,14 @@
+.background{
+    background-color: whitesmoke;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top:-80px
+
+
+}
+
+::Ng-deep .navbar {
+    background: whitesmoke!important;
+}

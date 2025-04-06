@@ -5,6 +5,9 @@ import { VlueioComponent } from './pages/vlueio/vlueio.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { VcoreLandpageComponent } from './pages/vcore-landpage/vcore-landpage.component';
 import { TariusLandpageComponent } from './pages/tarius-landpage/tarius-landpage.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component'
+import { TermOfServiceComponent } from './pages/term-of-service/term-of-service.component'
+
 
 // export const routes: Routes = [
 
@@ -27,6 +30,11 @@ export const routes: Routes = [
         { path: 'test', component: ProjectsComponent },
         { path: 'veep', component: VcoreLandpageComponent },
         { path: 'tarius', component: TariusLandpageComponent },
+        { path: 'privacy-policy', component: PrivacyPolicyComponent },
+        { path: 'terms-of-service', component: TermOfServiceComponent },
+
+
+        
 
 
     

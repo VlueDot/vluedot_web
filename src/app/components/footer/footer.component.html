@@ -1,27 +1,24 @@
-<section class="footer row">
-
-    
-    <div class="col coloptions">
-
-
-        <div class=logo (click) = 'gohome()'>
-            Vluedot
-        </div>
-        <div class="companydetails">
-            The Fifth Company SAC <br>
-            Lima, Peru       
-        </div>
-                  
-            
+<section class="footer row" style="height: auto; background-color: #f8f9fa; padding: 30px 0; font-size: 15px!important;
+text-align: center;">
+    <div class="col-sm-6 col-12" style="padding: 0px;">
+      <div class="logo row" style="cursor: pointer; padding: 0;" (click)="gohome()">
+        <h2 style="margin-bottom: 10px;">Vluedot</h2>
+      </div>
+      <div class="row">
+        <p i18n style="margin: 0;">
+          The Fifth Company SAC<br>
+          Lima, Peru<br>
+          Email: <a href="mailto:info@vluedot.com">info&#64;vluedot.com</a>
+        </p>
+      </div>
     </div>
-    <div i18n class="col coldata">
-
-        
-            Phone: +51 983569250 <br>
-            email: info&#64;vluedot.com
-        
-
+  
+    <div class="col-sm-6 col-12" style="padding: 30px; display: flex; font-size: 18px;
+    place-items: center;
+    place-content: center;">
+      <div style="display: flex; flex-direction: column; gap: 0px;">
+        <a i18n href="/{{this.currentLang}}/terms-of-service">Terms of Service</a>
+        <a i18n href="/{{this.currentLang}}/privacy-policy">Privacy Policy</a>
+      </div>
     </div>
-
-
-</section>
+  </section>
