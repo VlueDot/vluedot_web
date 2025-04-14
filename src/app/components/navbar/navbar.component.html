@@ -8,7 +8,7 @@
             <ul class="links">
                 <li class="homelink" (click)="changepage('')">Home</li>
                 <li class="vlueiolink" (click)="changepage('vlueio')">Vlue IO</li>
-                <li class="veeplink" (click)="changepage('veep')">Veep</li>
+                <!-- <li class="veeplink" (click)="changepage('veep')">Veep</li> -->
             </ul>
         </div>
         <div class="col-2 lang-selector">
@@ -31,7 +31,7 @@
         <div class="dropdown_menu" #dropdown_menu style="  cursor: pointer;">
             <li class="homelink" (click)="changepage('')">Home</li>
             <li class="vlueiolink" (click)="changepage('vlueio')">Vlue IO</li>
-            <li class="veeplink" (click)="changepage('veep')">Veep</li>
+            <!-- <li class="veeplink" (click)="changepage('veep')">Veep</li> -->
             <li *ngIf="this.currentLang == 'es'; else esp_option2" (click)="changeLanguage('en')">English version</li>
             <ng-template #esp_option2>
                 <li (click)="changeLanguage('es')">Version en español</li>

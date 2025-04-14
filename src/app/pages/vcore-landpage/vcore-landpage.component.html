@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="prompt col-sm col-lg-8">
                         <div class="prompt-content row">
-                            <h1>
+                            <h1 i18n>
                                 Track, plan and achieve
                                 your personal goals using
                                 <b> secure AI </b>
@@ -21,10 +21,10 @@
                             </h1>
                         </div>
                         <div class=" startinfo row">
-                            <h2>
+                            <h2 i18n>
                                 Get Started for Free
                             </h2>
-                            <h4>
+                            <h4 i18n>
                                 Share your phone number to activate your demo account
                             </h4>
 
@@ -40,7 +40,7 @@
                                         </select>
                                     </div>
                                     <div class="col-8" style="padding: 0px 12px 0px 6px !important;">
-                                        <input type="tel" id="phoneNumber"
+                                        <input i18n type="tel" id="phoneNumber"
                                             style="margin-left: 0px !important; width: 100%;"
                                             placeholder="Enter your phone number" required
                                             [(ngModel)]="customer_phoneNumber" />
@@ -49,7 +49,7 @@
 
                                 <div class="row" style="place-content: center; padding-top: 12px !important;">
                                     <div class="col">
-                                        <button class="action_btn" style="width: 100%; margin: 0!important"
+                                        <button i18n class="action_btn" style="width: 100%; margin: 0!important"
                                             type="submit" (click)="send_veep_demo_request()">Start Chat</button>
                                     </div>
 
@@ -60,29 +60,58 @@
                                         <span class="close" (click)="closeModal()">&times;</span>
 
 
-                                        <h3>Enter your code.</h3>
-                                        <p>Check your WhatsApp and enter the code we sent you.</p>
+                                        <div *ngIf="phoneexists; else consent">
+                                            <h3 i18n>You already in!</h3>
+                                            <p i18n>Try again with another number.</p>
 
-                                        <div class="row" style="padding-top: 12px !important;">
-                                            <div class="col-12 col-sm-9 verifycodeclass">
-                                                <input type="tel" id="verifycode"
-                                                    style="margin-left: 0px !important; width: 100%;"
-                                                    placeholder="Enter your personal code" required
-                                                    [(ngModel)]="code_to_verify" />
-                                            </div>
-
-                                            <div class="col-12 col-sm-3 verifybutton">
-                                                <button class="action_btn" style="width: 100%; margin: 0!important"
-                                                    type="submit" (click)="verify_code()" [disabled] = "block_send_code">Send Code</button>
-
-                                            </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-12 col-sm-9" style="text-align: center;" [ngStyle]="{ 'display': NotValidCode ? 'block' : 'none' }">
-                                                <p style="color: darkorange; margin: 0;">{{this.modalmessage}}</p>
+                                        <ng-template #consent>
+
+                                            <div *ngIf="consentNeeded; else codeForm">
+                                                <h3 i18n>Your consent is needed to continue</h3>
+                                                <p i18n>Please check your messenger and confirm to proceed.</p>
 
                                             </div>
-                                        </div>
+
+                                        </ng-template>
+
+
+                                        <ng-template #codeForm>
+                                            <h3 i18n>Enter your code.</h3>
+
+
+                                            <p i18n>Check your WhatsApp and enter the code we sent you.</p>
+
+                                            <div class="row" style="padding-top: 12px !important;">
+                                                <div class="col-12 col-sm-9 verifycodeclass">
+                                                    <input type="tel" id="verifycode"
+                                                        style="margin-left: 0px !important; width: 100%;"
+                                                        placeholder="Enter your personal code" required
+                                                        [(ngModel)]="code_to_verify" />
+                                                </div>
+
+                                                <div class="col-12 col-sm-3 verifybutton">
+                                                    <button class="action_btn" style="width: 100%; margin: 0!important"
+                                                        type="submit" (click)="verify_code()"
+                                                        [disabled]="block_send_code">Send Code</button>
+
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-9" style="text-align: center;"
+                                                    [ngStyle]="{ 'display': NotValidCode ? 'block' : 'none' }">
+                                                    <p style="color: darkorange; margin: 0;">{{this.modalmessage}}</p>
+
+                                                </div>
+                                                <!-- <div class="col-12" style="text-align: center; padding-top: 12px;">
+
+                                                    <p i18n>By verifying your phone number, you consent to receive
+                                                        communications via WhatsApp. </p>
+                                                </div> -->
+
+                                            </div>
+
+                                        </ng-template>
                                     </div>
                                 </div>
 
@@ -136,10 +165,10 @@
                     </div>
                     <div class="prompt col-md-7" style="height: auto;">
                         <div class="prompt-content row">
-                            <h2 id="boxtittle">
+                            <h2 i18n id="boxtittle">
                                 Automate. Optimize. Connect.
                             </h2>
-                            <p>
+                            <p i18n>
                                 Veep is an intelligent assistant that helps you manage your daily tasks through WhatsApp
                                 and other channels. Whether you need to schedule meetings, respond to emails, manage
                                 tasks, or receive automatic reports, Veep does it for you—quickly, naturally, and
@@ -156,23 +185,26 @@
                 <div class="row" style="padding: 20px 0px !important;">
                     <div class="prompt col">
                         <div class="prompt-content row">
-                            <h3 id="boxtittle2" style="padding: 0;">
+                            <h3 i18n id="boxtittle2" style="padding: 0;">
                                 <strong>What can Veep do for You?</strong>
                             </h3>
                             <ul>
-                                <li> <strong>Smart Management: </strong>Organizes your schedule, sets up meetings, and
+                                <li i18n> <strong>Smart Management: </strong>Organizes your schedule, sets up meetings,
+                                    and
                                     sends personalized
                                     reminders.</li>
-                                <li> <strong>Task Automation: </strong> Processes emails, responds to messages, and
+                                <li i18n> <strong>Task Automation: </strong> Processes emails, responds to messages, and
                                     executes actions
                                     automatically.</li>
-                                <li><strong>Seamless Integrations:</strong> Easily connects with Google Calendar, Odoo,
+                                <li i18n><strong>Seamless Integrations:</strong> Easily connects with Google Calendar,
+                                    Odoo,
                                     CRM, and more
                                 </li>
-                                <li><strong>Natural Interaction:</strong> Chat with Veep like a real assistant and
+                                <li i18n><strong>Natural Interaction:</strong> Chat with Veep like a real assistant and
                                     receive accurate,
                                     context-aware responses.</li>
-                                <li><strong>Reports & Analytics:</strong> Get real-time insights into your workflows and
+                                <li i18n><strong>Reports & Analytics:</strong> Get real-time insights into your
+                                    workflows and
                                     efficiency
                                     metrics.</li>
                             </ul>
@@ -186,18 +218,20 @@
                     <div class="col-12 col-lg-7 col-md-6 security_block">
                         <div class="prompt">
                             <div class="prompt-content row">
-                                <h3 style="padding: 0;" id="boxtittle3">
+                                <h3 i18n style="padding: 0;" id="boxtittle3">
                                     <strong>Security</strong>
                                 </h3>
-                                <p style="padding: 0;">At Veep, security is not just a feature—it’s a commitment. </p>
+                                <p i18n style="padding: 0;">At Veep, security is not just a feature—it’s a commitment.
+                                </p>
                                 <ul>
-                                    <li> <strong>End-to-End Encryption:</strong> All interactions are encrypted by
+                                    <li i18n> <strong>End-to-End Encryption:</strong> All interactions are encrypted by
                                         default using cutting-edge
                                         cryptographic techniques, making them virtually impossible to decode for at
                                         least
                                         320 years, even with the most powerful computing resources. Optional encryption
                                         upgrades available.</li>
-                                    <li><strong>Data Isolation:</strong> Every user and business operates within a fully
+                                    <li i18n><strong>Data Isolation:</strong> Every user and business operates within a
+                                        fully
                                         isolated
                                         environment, ensuring strict access control and preventing unauthorized data
                                         mixing.
@@ -215,18 +249,20 @@
                     <div class="col-12 col-lg-5 col-md-6 privacy_block">
                         <div class="prompt" style="height: 100%; place-content: initial;">
                             <div class="prompt-content row">
-                                <h3 id="boxtittle3" style="padding: 0;">
+                                <h3 i18n id="boxtittle3" style="padding: 0;">
                                     <strong>Privacy</strong>
                                 </h3>
-                                <p style="padding: 0;">We also ensure your information remains private:</p>
+                                <p i18n style="padding: 0;">We also ensure your information remains private:</p>
                                 <ul>
 
-                                    <li><strong>Privacy Guaranteed: </strong>Your data is NOT used to train AI models.
+                                    <li i18n><strong>Privacy Guaranteed: </strong>Your data is NOT used to train AI
+                                        models.
                                         The information you
                                         share with Veep is solely used to provide personalized assistance and improve
                                         your
                                         experience.</li>
-                                    <li><strong>Regulatory Compliance:</strong> We strictly follow data protection laws,
+                                    <li i18n><strong>Regulatory Compliance:</strong> We strictly follow data protection
+                                        laws,
                                         ensuring your
                                         information is handled responsibly and securely.</li>
                                 </ul>
@@ -242,18 +278,19 @@
                     <div class="col-xs-12 col-md-6 col-lg-4 block_a">
                         <div class="prompt" style="height: 100%; place-content: initial;">
                             <div class="prompt-content row">
-                                <h3 style="padding: 0;" id="boxtittle3">
+                                <h3 i18n style="padding: 0;" id="boxtittle3">
                                     <strong>Who Is Veep For?</strong>
                                 </h3>
                                 <p style="padding: 0;"> </p>
                                 <ul>
-                                    <li> <strong>Businesses:</strong> Streamline internal communication, optimize
+                                    <li i18n> <strong>Businesses:</strong> Streamline internal communication, optimize
                                         workflows, and enhance operational efficiency.</li>
-                                    <li><strong>Professionals:</strong> Automate tasks and processes so you can focus on
+                                    <li i18n><strong>Professionals:</strong> Automate tasks and processes so you can
+                                        focus on
                                         what truly matters.
                                     </li>
 
-                                    <li>
+                                    <li i18n>
                                         <strong>Personal Users: </strong>
                                         Manage reminders, events, and daily tasks effortlessly.
                                     </li>
@@ -270,16 +307,19 @@
                     <div class="col-xs-12 col-md-6 col-lg-4 block_b">
                         <div class="prompt" style="height: 100%; place-content: initial;">
                             <div class="prompt-content row">
-                                <h3 id="boxtittle3" style="padding: 0;">
+                                <h3 i18n id="boxtittle3" style="padding: 0;">
                                     <strong>How It Works</strong>
                                 </h3>
                                 <p style="padding: 0;"></p>
                                 <ul>
 
-                                    <li><strong>Activate Veep: </strong>Connect your WhatsApp with a single click.</li>
-                                    <li><strong>Send Your Request:</strong> Describe what you need, and Veep will handle
+                                    <li i18n><strong>Activate Veep: </strong>Connect your WhatsApp with a single click.
+                                    </li>
+                                    <li i18n><strong>Send Your Request:</strong> Describe what you need, and Veep will
+                                        handle
                                         the task for you.</li>
-                                    <li><strong>Receive Results:</strong> Get real-time responses and updates while Veep
+                                    <li i18n><strong>Receive Results:</strong> Get real-time responses and updates while
+                                        Veep
                                         organizes and automates your daily activities.</li>
                                 </ul>
 
@@ -290,18 +330,19 @@
 
                     <div class="col-xs-12 col-md-12 col-lg-4 block_c">
                         <div class="prompt"
-                            style="height: 100%; place-content: initial; background-color:rgba(150,150,150,90%) ;">
+                            style="height: 100%; place-content: initial; background-color:rgba(10,10,10,90%) ;">
                             <div class="prompt-content row">
-                                <h3 id="boxtittle3" style="padding: 0;">
+                                <h3 i18n id="boxtittle3" style="padding: 0;">
                                     <strong>Get Started Today</strong>
                                 </h3>
-                                <p style="padding: 0;">Experience the future of automation—risk-free!</p>
+                                <p i18n style="padding: 0;">Experience the future of automation—risk-free!</p>
 
-                                <p style="padding: 0;"> <strong>Free Trial: </strong> <br> Start using Veep at no cost
+                                <p i18n style="padding: 0;"> <strong>Free Trial: </strong> <br> Start using Veep at no
+                                    cost
                                     and see how it transforms your productivity, but if you want you could start by</p>
 
-                                <p style="padding: 0;"> <br> <strong>Supporting us: </strong> <br> only buying some
-                                    coffee here!</p>
+                                <p i18n style="padding: 0;"> <br> <strong>Supporting us: </strong> <br> just buying some
+                                    coffee!</p>
 
 
 

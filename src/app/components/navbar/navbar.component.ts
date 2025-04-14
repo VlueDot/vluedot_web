@@ -49,10 +49,10 @@ export class NavbarComponent implements OnInit,AfterViewInit {
 
     this.currentLang = LanguageUtils.getLanguage(window)
     var href_ = window.location.pathname.split('/')[1]
-    if(href_=='veep'){
+    // if(href_=='veep'){
 
-      this.changeNavColor('veep')
-    }
+    //   this.changeNavColor('veep')
+    // }
     
   }
 
@@ -90,8 +90,8 @@ export class NavbarComponent implements OnInit,AfterViewInit {
       $('.vlueiolink')[0].style.display = 'flex'
       $('.vlueiolink')[1].style.display = 'flex'
 
-      $('.veeplink')[0].style.display = 'flex'
-      $('.veeplink')[1].style.display = 'flex'
+      // $('.veeplink')[0].style.display = 'flex'
+      // $('.veeplink')[1].style.display = 'flex'
     }
     else if(link=="vlueio"){
 
@@ -101,8 +101,8 @@ export class NavbarComponent implements OnInit,AfterViewInit {
       $('.vlueiolink')[0].style.display = 'none'
       $('.vlueiolink')[1].style.display = 'none'
 
-      $('.veeplink')[0].style.display = 'flex'
-      $('.veeplink')[1].style.display = 'flex'
+      // $('.veeplink')[0].style.display = 'flex'
+      // $('.veeplink')[1].style.display = 'flex'
     }
     else if(link=="veep"){
 
@@ -112,8 +112,8 @@ export class NavbarComponent implements OnInit,AfterViewInit {
       $('.vlueiolink')[0].style.display = 'flex'
       $('.vlueiolink')[1].style.display = 'flex'
 
-      $('.veeplink')[0].style.display = 'none'
-      $('.veeplink')[1].style.display = 'none'
+      // $('.veeplink')[0].style.display = 'none'
+      // $('.veeplink')[1].style.display = 'none'
     }
   }
   
