@@ -2,11 +2,10 @@ import { Component,  } from '@angular/core';
 
 
 @Component({
-  selector: 'app-whyus',
-  standalone: true,
-  imports: [],
-  templateUrl: './whyus.component.html',
-  styleUrl: './whyus.component.scss'
+    selector: 'app-whyus',
+    imports: [],
+    templateUrl: './whyus.component.html',
+    styleUrl: './whyus.component.scss'
 })
 export class WhyusComponent  {
 

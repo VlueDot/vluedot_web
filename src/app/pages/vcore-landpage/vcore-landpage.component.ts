@@ -1,27 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+// import { io, Socket } from 'socket.io-client';
+import { collection, doc } from '@angular/fire/firestore';
+import { collectionData, docData } from 'rxfire/firestore'
+import { Observable } from 'rxjs';
+import { VCORE_FIRESTORE } from 'src/vcore-token'
 
 
 @Component({
   selector: 'app-vcore-landpage',
-  standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './vcore-landpage.component.html',
   styleUrl: './vcore-landpage.component.scss'
 })
 export class VcoreLandpageComponent implements OnInit {
+
+
+  messages$!: Observable<any>;
+
+  vcore = inject(VCORE_FIRESTORE);
+
+
   selectedCountryCode: string = '+51'
   customer_phoneNumber: string = '983569250'
   code_to_verify: string = ''
-  // CodeValidationIsVisible: boolean = false
   isModalOpen = false;
   NotValidCode: boolean = false;
   block_send_code = false
   modalmessage: string = "You must entry a valid code"
   validated_phonenumber: string = ''
-  phoneexists: boolean = false
-  consentNeeded: boolean = true
+  block_mainbutton: boolean = false
+  current_state = 'default'
 
   pre_url = 'http://127.0.0.1:5001/vcore-dev/us-central1'
   // pre_url = "https://us-central1-vcore-dev.cloudfunctions.net"
@@ -40,55 +50,36 @@ export class VcoreLandpageComponent implements OnInit {
     if (event.data && typeof event.data === 'object') {
       let data = event.data
 
-      if (data['type'] == 'consent') {
+      this.current_state = 'LoginDone'
 
-        this.consentNeeded = false
+      data['main_phonenumber'] = this.validated_phonenumber
+
+      let url = this.pre_url + '/vcore_auth_services/createVCoreAccount';
+
+      let requestOptions = {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      };
+
+
+      const response = await fetch(url, requestOptions);
+
+      let response_ = (await response.json())['res']
+
+      console.log(response_)
+
+      if (response_ == 'accountCreated') {
+
+        console.log("_________ created - create response ")
+        this.current_state = 'accountCreated'
+
 
       }
-      else if (data['type'] == 'createAccount') {
-        data['main_phonenumber'] = this.validated_phonenumber
-
-        let url = this.pre_url + '/vcore_auth_services/createVCoreAccount';
-
-        let requestOptions = {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        };
 
 
-        const response = await fetch(url, requestOptions);
-        let response_ = (await response.json())['res']
-        if (response_ == 'VCoreAccountCreated') {
-
-          console.log("_________ created - create response ")
-
-
-          url = this.pre_url + '/veep_messenger_services/sendmessage'
-          requestOptions =
-          {
-            method: "POST",
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(
-              {
-                "keyword": "ask_consent",
-                "data": { 'main_phonenumber': data['main_phonenumber'] }
-              }
-            )
-          };
-
-          console.log("requestOptions >>>>", requestOptions)
-
-          const response2 = await fetch(url, requestOptions);
-
-
-        }
-
-      }
 
     }
   }
@@ -100,6 +91,8 @@ export class VcoreLandpageComponent implements OnInit {
   closeModal() {
     this.isModalOpen = false;
     this.NotValidCode = false;
+    this.block_mainbutton = false
+
   }
 
   async verify_code() {
@@ -152,7 +145,7 @@ export class VcoreLandpageComponent implements OnInit {
         }
       } else {
         this.openOAuthWindow()
-        this.closeModal()
+        // this.closeModal()
         this.validated_phonenumber = this.selectedCountryCode + this.customer_phoneNumber
 
 
@@ -193,6 +186,7 @@ export class VcoreLandpageComponent implements OnInit {
       const res_json = await response.json();
 
       const oauthWindow = window.open(res_json.url, '_blank', 'width=700,height=500,resizable=no,scrollbars=no,toolbar=no,menubar=no,status=no,location=no');
+      this.current_state = 'oauthNeeded'
 
 
 
@@ -200,24 +194,25 @@ export class VcoreLandpageComponent implements OnInit {
       console.error("Error:", error);
     }
 
-
-
   }
 
-  async send_veep_demo_request() {
 
-    if (!this.customer_phoneNumber) {
-      alert('Please enter your phone number.');
-      return;
-    }
 
-    if (!/^\d{9}$/.test(this.customer_phoneNumber.trim())) {
-      alert('Please enter a valid 9-digit phone number without spaces or special characters.');
-      return;
-    }
 
-    const fullPhone = this.selectedCountryCode + this.customer_phoneNumber;
-    // const url = `https://us-central1-vcore-dev.cloudfunctions.net/veep_accounts_services/getverificationcode`;
+
+
+
+
+
+
+
+
+
+
+
+  async send_veep_code(fullPhone: string) {
+
+
     const url = this.pre_url + '/veep_accounts_services/getverificationcode';
 
     const requestOptions = {
@@ -230,7 +225,7 @@ export class VcoreLandpageComponent implements OnInit {
 
     try {
 
-      this.openModal()
+
 
       const response = await fetch(url, requestOptions);
 
@@ -238,14 +233,9 @@ export class VcoreLandpageComponent implements OnInit {
 
 
       if (response.status == 200) {
-        if (res_json['res'] == 'phoneexists') {
+        console.log(res_json)
 
-          this.phoneexists = true
 
-        }
-        // else if (res_json['res'] == 'CodeAlreadySent') {
-        //   // alert('Code already sent');
-        // }
       }
       else {
         console.error("Error V1304251905:", res_json);
@@ -259,7 +249,13 @@ export class VcoreLandpageComponent implements OnInit {
 
   }
 
-  async send_veep_consent() {
+
+
+
+
+  async send_veep_account_request() {
+
+    this.block_mainbutton = true
 
     if (!this.customer_phoneNumber) {
       alert('Please enter your phone number.');
@@ -271,7 +267,10 @@ export class VcoreLandpageComponent implements OnInit {
       return;
     }
 
+    this.openModal()
+
     const fullPhone = this.selectedCountryCode + this.customer_phoneNumber;
+
     // const url = `https://us-central1-vcore-dev.cloudfunctions.net/veep_accounts_services/giveConsent`;
     const url = this.pre_url + '/veep_accounts_services/giveConsent';
 
@@ -286,13 +285,56 @@ export class VcoreLandpageComponent implements OnInit {
 
     try {
 
-      this.openModal()
-
       const response = await fetch(url, requestOptions);
 
-      // const res_json = await response.json();
+      const res_json = await response.json();
 
-      return response
+
+      if (response.status != 200) {
+        console.error("Error V1304251905:", res_json);
+      }else{
+
+
+        // turn to accountCreated > active
+        if(res_json['res'] == 'accountCreated' ) this.current_state = 'isclient'
+      }
+
+
+
+      const messagesRef = doc(this.vcore, 'phonenumbers/', fullPhone);
+      this.messages$ = docData(messagesRef)
+      docData(messagesRef).subscribe(data => {
+
+        console.log("Nuevo mensaje recibido:", data);
+
+
+        if (data?.["state"] == 'asking_consent') {
+          console.log("asking_consent")
+          this.current_state = 'consentNeeded'
+
+
+
+        }
+
+        else if (data?.["state"] == 'given_consent_asking_code') {
+          console.log("given_consent_asking_code")
+          this.current_state = 'askingCode'
+
+          this.send_veep_code(fullPhone)
+
+        }
+        else if (data?.["state"] == 'active') {
+          console.log("phone exists")
+          this.current_state = 'isclient'
+
+
+        }
+
+
+      });
+
+
+
     }
 
     catch (error) {
@@ -302,11 +344,6 @@ export class VcoreLandpageComponent implements OnInit {
     }
 
   }
-
-
-
-
-
 
 
 }

@@ -5,11 +5,10 @@ declare var $: any;
 
 
 @Component({
-  selector: 'app-vlueio',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './vlueio.component.html',
-  styleUrl: './vlueio.component.scss'
+    selector: 'app-vlueio',
+    imports: [CommonModule],
+    templateUrl: './vlueio.component.html',
+    styleUrl: './vlueio.component.scss'
 })
 export class VlueioComponent implements OnInit, AfterViewInit {
   @ViewChild('carouselin') carouselin!: ElementRef;

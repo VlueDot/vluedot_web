@@ -2,18 +2,17 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomeVlueioComponent } from './components/home-vlueio/home-vlueio.component';
+// import { HomeVlueioComponent } from './components/home-vlueio/home-vlueio.component';
 import { LanguageUtils } from '../utils/language.utils';
-import { After } from 'v8';
+// import { After } from 'v8';
 
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, FooterComponent, NavbarComponent, HomeVlueioComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
-  // template: '<router-outlet></router-outlet>'
+    selector: 'app-root',
+    imports: [RouterOutlet, FooterComponent, NavbarComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
+    // template: '<router-outlet></router-outlet>'
 })
 
 export class AppComponent implements OnInit, AfterViewInit {

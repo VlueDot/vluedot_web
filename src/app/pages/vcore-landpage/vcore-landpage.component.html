@@ -50,7 +50,8 @@
                                 <div class="row" style="place-content: center; padding-top: 12px !important;">
                                     <div class="col">
                                         <button i18n class="action_btn" style="width: 100%; margin: 0!important"
-                                            type="submit" (click)="send_veep_demo_request()">Start Chat</button>
+                                            type="submit" (click)="send_veep_account_request()"
+                                            [disabled]="block_mainbutton">Start Chat</button>
                                     </div>
 
                                 </div>
@@ -60,58 +61,91 @@
                                         <span class="close" (click)="closeModal()">&times;</span>
 
 
-                                        <div *ngIf="phoneexists; else consent">
-                                            <h3 i18n>You already in!</h3>
-                                            <p i18n>Try again with another number.</p>
 
-                                        </div>
-                                        <ng-template #consent>
+                                        <div [ngSwitch]="current_state">
 
-                                            <div *ngIf="consentNeeded; else codeForm">
+                                            <div *ngSwitchCase="'default'">
+                                                <h3 i18n>Welcome! You're about to begin a new journey</h3>
+                                                <p i18n>Please hold on a moment while we get everything ready for you
+                                                </p>
+                                            </div>
+
+                                            <div *ngSwitchCase="'isclient'">
+                                                <h3 i18n>You are already in!</h3>
+                                                <p i18n>Try again with another number.</p>
+                                            </div>
+
+                                            <div *ngSwitchCase="'consentNeeded'">
                                                 <h3 i18n>Your consent is needed to continue</h3>
                                                 <p i18n>Please check your messenger and confirm to proceed.</p>
+                                            </div>
+
+                                            <div *ngSwitchCase="'LoginDone'">
+                                                <h3 i18n>All set!</h3>
+                                                <p i18n>We're now taking care of a few things in the background. Please
+                                                    hold on a moment.</p>
+                                            </div>
+
+                                            <div *ngSwitchCase="'accountCreated'">
+                                                <h3 i18n>Thank you for joining us!</h3>
+                                                <p i18n>You're all set to start using Veep. Welcome aboard!</p>
+                                            </div>
+
+                                            <div *ngSwitchCase="'oauthNeeded'">
+                                                <h3 i18n>Just one more step!</h3>
+                                                <p i18n>Please log in with your Gmail account in the popup to complete
+                                                    everything.</p>
+                                            </div>
+
+                                            <div *ngSwitchCase="'askingCode'">
+
+                                                <h3 i18n>Enter your code.</h3>
+
+
+                                                <p i18n>Check your WhatsApp and enter the code we sent you.</p>
+
+                                                <div class="row" style="padding-top: 12px !important;">
+                                                    <div class="col-12 col-sm-9 verifycodeclass">
+                                                        <input type="tel" id="verifycode"
+                                                            style="margin-left: 0px !important; width: 100%;"
+                                                            placeholder="Enter your personal code" required
+                                                            [(ngModel)]="code_to_verify" />
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-3 verifybutton">
+                                                        <button class="action_btn"
+                                                            style="width: 100%; margin: 0!important" type="submit"
+                                                            (click)="verify_code()" [disabled]="block_send_code">Send
+                                                            Code</button>
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-9" style="text-align: center;"
+                                                        [ngStyle]="{ 'display': NotValidCode ? 'block' : 'none' }">
+                                                        <p style="color: darkorange; margin: 0;">{{this.modalmessage}}
+                                                        </p>
+
+                                                    </div>
+                                                    <!-- <div class="col-12" style="text-align: center; padding-top: 12px;">
+        
+                                                            <p i18n>By verifying your phone number, you consent to receive
+                                                                communications via WhatsApp. </p>
+                                                        </div> -->
+
+                                                </div>
+
+
+
 
                                             </div>
 
-                                        </ng-template>
+
+                                        </div>
 
 
-                                        <ng-template #codeForm>
-                                            <h3 i18n>Enter your code.</h3>
 
 
-                                            <p i18n>Check your WhatsApp and enter the code we sent you.</p>
-
-                                            <div class="row" style="padding-top: 12px !important;">
-                                                <div class="col-12 col-sm-9 verifycodeclass">
-                                                    <input type="tel" id="verifycode"
-                                                        style="margin-left: 0px !important; width: 100%;"
-                                                        placeholder="Enter your personal code" required
-                                                        [(ngModel)]="code_to_verify" />
-                                                </div>
-
-                                                <div class="col-12 col-sm-3 verifybutton">
-                                                    <button class="action_btn" style="width: 100%; margin: 0!important"
-                                                        type="submit" (click)="verify_code()"
-                                                        [disabled]="block_send_code">Send Code</button>
-
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12 col-sm-9" style="text-align: center;"
-                                                    [ngStyle]="{ 'display': NotValidCode ? 'block' : 'none' }">
-                                                    <p style="color: darkorange; margin: 0;">{{this.modalmessage}}</p>
-
-                                                </div>
-                                                <!-- <div class="col-12" style="text-align: center; padding-top: 12px;">
-
-                                                    <p i18n>By verifying your phone number, you consent to receive
-                                                        communications via WhatsApp. </p>
-                                                </div> -->
-
-                                            </div>
-
-                                        </ng-template>
                                     </div>
                                 </div>
 
@@ -119,6 +153,7 @@
 
                         </div>
                     </div>
+
                     <div class="d-none d-lg-block col-lg-4   contentimage">
 
                         <img class="promptimg"

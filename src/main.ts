@@ -6,6 +6,29 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideHttpClient } from '@angular/common/http';
 
+import { initializeApp as initializeApp2 } from 'firebase/app'; // para la segunda app
+import { getFirestore as getFirestore2 } from 'firebase/firestore';
+import {VCORE_FIRESTORE} from 'src/vcore-token'
+import { connectFirestoreEmulator } from 'firebase/firestore';
+
+const vcoreFirebaseConfig = {
+    apiKey: "AIzaSyCCGR9MYHsBUYPYbyvLIluTHBwxr_DqaFU",
+    authDomain: "vcore-dev.firebaseapp.com",
+    databaseURL: "https://vcore-dev-default-rtdb.firebaseio.com",
+    projectId: "vcore-dev",
+    storageBucket: "vcore-dev.firebasestorage.app",
+    messagingSenderId: "352693461235",
+    appId: "1:352693461235:web:0e721c39ad3bd3f0025786",
+    measurementId: "G-E5J1Z09WV3"
+  }
+
+
+const vcoreApp = initializeApp2(vcoreFirebaseConfig, "vcoreApp");
+export const vcoreFirestore = getFirestore2(vcoreApp);
+connectFirestoreEmulator(vcoreFirestore, '127.0.0.1', 8080);
+
+
+
 const environment = {
   production: false,
   firebaseConfig: {
@@ -19,12 +42,16 @@ const environment = {
   }
 };
 
+
+
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideAuth(() => getAuth()),
-    provideHttpClient()
+    provideHttpClient(),
+    { provide: VCORE_FIRESTORE, useValue: vcoreFirestore } 
+
 
 
   ]

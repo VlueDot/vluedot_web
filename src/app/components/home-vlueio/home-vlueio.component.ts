@@ -3,11 +3,10 @@ import { LanguageUtils } from 'src/utils/language.utils';
 
 
 @Component({
-  selector: 'app-home-vlueio',
-  standalone: true,
-  imports: [],
-  templateUrl: './home-vlueio.component.html',
-  styleUrl: './home-vlueio.component.scss'
+    selector: 'app-home-vlueio',
+    imports: [],
+    templateUrl: './home-vlueio.component.html',
+    styleUrl: './home-vlueio.component.scss'
 })
 export class HomeVlueioComponent implements OnInit {
   public currentLang: string = 'en';

@@ -5,11 +5,10 @@ import { CommonModule } from '@angular/common';
 declare var $: any; 
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+    selector: 'app-projects',
+    imports: [CommonModule],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent implements AfterViewInit, OnInit {
   public saved_lang : string = 'en'
